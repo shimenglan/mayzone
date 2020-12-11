@@ -1,0 +1,18 @@
+$no:none;
+$font:12px;
+$font16:16px;
+%wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+$boxsize:100%;
+@import "common";
+@import "head";
+@import "search";
+@import "title";
+@import "menuSlideshow";
+@import "group";
+@import "banner";
+@import "section";
+@import "footer";

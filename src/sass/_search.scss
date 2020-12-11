@@ -1,0 +1,205 @@
+.search {
+    @extend %wrap;
+    height: 130px;
+}
+
+//logo
+.logo {
+    float: left;
+    width: 150px;
+    height: 115px;
+    padding-left: 5px;
+    img {
+        width: $boxsize;
+        height: $boxsize;
+    }
+}
+
+//搜索栏
+.sea {
+    float: left;
+    padding-top: 25px;
+    width: 490px;
+    margin-left: 70px;
+    p {
+        height: $font16;
+        font-size: $font16*0.875;
+        margin: 1%;
+        a {
+            color: #808080;
+            float: left;
+            padding: 0 1%;
+            line-height: 14px;
+            border-right: 1px solid #dcdcdc;
+        }
+    }
+}
+
+.inputbox {
+    height: 40px;
+    background-color: #cc0000;
+    input {
+        width: 79%;
+        border: 2px solid #cc0000;
+        float: left;
+        padding: 2% 0 2% 2%;
+        height: 16px;
+        font-size: $font16*0.75;
+    }
+    a {
+        display: block;
+        width: 17.5%;
+        text-align: center;
+        color: #fff;
+        font-size: $font16*1.125;
+        float: right;
+        line-height: 40px;
+        height: 40px;
+    }
+}
+
+//购物车
+%s-right {
+    float: right;
+    margin-top: 25px;
+    width: 34px;
+    height: 40px;
+    text-align: center;
+    color: #555;
+    background-color: #FAFAFA;
+    border: 1px solid #dddddd;
+    position: relative;
+    &:hover .s-buy-massage,
+    &:hover .s-person-massage {
+        display: block;
+    }
+    .s-buy-massage,
+    .s-person-massage {
+        display: none;
+        position: absolute;
+        top: 40px;
+        right: 0;
+    }
+    .s-font {
+        line-height: 40px;
+        cursor: pointer;
+    }
+}
+
+.s-buy {
+    margin-right: 30px;
+    @extend %s-right;
+}
+
+.s-buy-massage {
+    width: 348px;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    z-index: 200;
+    .s-buy-title {
+        height: 30px;
+        padding: 7px;
+        overflow: hidden;
+        border-bottom: 1px solid #f0f0f0;
+        h4 {
+            font-weight: bold;
+            line-height: 30px;
+            font-size: 12px;
+            float: left;
+            margin: 16px 0;
+        }
+    }
+    .buy-goods {
+        height: 56px;
+        text-align: center;
+        line-height: 56px;
+    }
+    .s-tocart {
+        background-color: #f0f0f0;
+        padding: 8px;
+        overflow: hidden;
+        a {
+            float: right;
+            line-height: 20px;
+            padding: 4px 8px;
+            margin-top: 4px;
+            font-size: $font;
+            color: #fff;
+            background-color: #D93600;
+            border-radius: 4px;
+        }
+    }
+}
+
+//用户中心
+.s-person {
+    margin-right: 10px;
+    @extend %s-right;
+}
+
+.s-person-massage {
+    width: 308px;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    font-size: $font;
+    color: #005EA6;
+    a {
+        color: #005EA6;
+    }
+    .person-title {
+        height: 30px;
+        line-height: 30px;
+        list-style: 30px;
+        border-bottom: 1px solid #ddd;
+    }
+    .st-menu {
+        overflow: hidden;
+        padding: 8px 0;
+        position: relative;
+        border-bottom: 1px solid #ddd;
+        .st-line {
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            width: 1px;
+            height: 72px;
+            background-color: #ddd;
+        }
+    }
+}
+
+%st-menu-both {
+    text-align: left;
+    width: 138px;
+    overflow: hidden;
+    li {
+        padding: 4px 0 4px 16px;
+    }
+}
+
+.st-menu .left {
+    @extend %st-menu-both;
+}
+
+.st-menu .right {
+    @extend %st-menu-both;
+}
+
+.s-history {
+    background-color: #fafafa;
+}
+
+.his-title {
+    overflow: hidden;
+    padding: 6px 8px;
+    h4 {
+        font-weight: bold;
+        color: #000;
+    }
+}
+
+.s-history .goods {
+    color: #333;
+    line-height: 20px;
+    padding-bottom: 4px;
+}

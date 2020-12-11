@@ -1,0 +1,337 @@
+.head, .search {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Microsoft YaHei";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+input {
+  outline: none;
+}
+
+body {
+  min-width: 1000px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear-float::after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.header {
+  height: 30px;
+  background-color: #eee;
+  border-bottom: 1px solid #dfdfdf;
+  color: #666666;
+}
+
+.head {
+  line-height: 30px;
+}
+
+.head-l {
+  float: left;
+}
+.head-l span,
+.head-l a {
+  display: block;
+  float: left;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.head-r {
+  float: right;
+  width: 520px;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.h-item, .h-item ul {
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+.h-item {
+  position: relative;
+  float: right;
+  width: 92px;
+  text-align: center;
+}
+.h-item ul {
+  display: none;
+  position: absolute;
+  top: 28px;
+  background-color: #fff;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+.h-item ul li {
+  margin-left: 12px;
+}
+
+.h-item:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.h-item:hover ul {
+  display: block;
+}
+
+.h-buy {
+  float: right;
+  width: 42px;
+}
+
+.search {
+  height: 130px;
+}
+
+.logo {
+  float: left;
+  width: 150px;
+  height: 115px;
+  padding-left: 5px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.sea {
+  float: left;
+  padding-top: 25px;
+  width: 490px;
+  margin-left: 70px;
+}
+.sea p {
+  height: 16px;
+  font-size: 14px;
+  margin: 1%;
+}
+.sea p a {
+  color: #808080;
+  float: left;
+  padding: 0 1%;
+  line-height: 14px;
+  border-right: 1px solid #dcdcdc;
+}
+
+.inputbox {
+  height: 40px;
+  background-color: #cc0000;
+}
+.inputbox input {
+  width: 79%;
+  border: 2px solid #cc0000;
+  float: left;
+  padding: 2% 0 2% 2%;
+  height: 16px;
+  font-size: 12px;
+}
+.inputbox a {
+  display: block;
+  width: 17.5%;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  float: right;
+  line-height: 40px;
+  height: 40px;
+}
+
+.s-buy, .s-person {
+  float: right;
+  margin-top: 25px;
+  width: 34px;
+  height: 40px;
+  text-align: center;
+  color: #555;
+  background-color: #FAFAFA;
+  border: 1px solid #dddddd;
+  position: relative;
+}
+.s-buy:hover .s-buy-massage, .s-person:hover .s-buy-massage, .s-buy:hover .s-person-massage, .s-person:hover .s-person-massage {
+  display: block;
+}
+.s-buy .s-buy-massage, .s-person .s-buy-massage,
+.s-buy .s-person-massage,
+.s-person .s-person-massage {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+.s-buy .s-font, .s-person .s-font {
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.s-buy {
+  margin-right: 30px;
+}
+
+.s-buy-massage {
+  width: 348px;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  z-index: 200;
+}
+.s-buy-massage .s-buy-title {
+  height: 30px;
+  padding: 7px;
+  overflow: hidden;
+  border-bottom: 1px solid #f0f0f0;
+}
+.s-buy-massage .s-buy-title h4 {
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 12px;
+  float: left;
+  margin: 16px 0;
+}
+.s-buy-massage .buy-goods {
+  height: 56px;
+  text-align: center;
+  line-height: 56px;
+}
+.s-buy-massage .s-tocart {
+  background-color: #f0f0f0;
+  padding: 8px;
+  overflow: hidden;
+}
+.s-buy-massage .s-tocart a {
+  float: right;
+  line-height: 20px;
+  padding: 4px 8px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #D93600;
+  border-radius: 4px;
+}
+
+.s-person {
+  margin-right: 10px;
+}
+
+.s-person-massage {
+  width: 308px;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  font-size: 12px;
+  color: #005EA6;
+}
+.s-person-massage a {
+  color: #005EA6;
+}
+.s-person-massage .person-title {
+  height: 30px;
+  line-height: 30px;
+  list-style: 30px;
+  border-bottom: 1px solid #ddd;
+}
+.s-person-massage .st-menu {
+  overflow: hidden;
+  padding: 8px 0;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+.s-person-massage .st-menu .st-line {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 1px;
+  height: 72px;
+  background-color: #ddd;
+}
+
+.st-menu .left, .st-menu .right {
+  text-align: left;
+  width: 138px;
+  overflow: hidden;
+}
+.st-menu .left li, .st-menu .right li {
+  padding: 4px 0 4px 16px;
+}
+
+.s-history {
+  background-color: #fafafa;
+}
+
+.his-title {
+  overflow: hidden;
+  padding: 6px 8px;
+}
+.his-title h4 {
+  font-weight: bold;
+  color: #000;
+}
+
+.s-history .goods {
+  color: #333;
+  line-height: 20px;
+  padding-bottom: 4px;
+}
+
+/*# sourceMappingURL=index.css.map */

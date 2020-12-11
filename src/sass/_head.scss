@@ -1,0 +1,74 @@
+$headh:30px;
+.header {
+    height: $headh;
+    background-color: #eee;
+    border-bottom: 1px solid #dfdfdf;
+    color: #666666;
+}
+
+.head {
+    @extend %wrap;
+    line-height: $headh;
+}
+
+//左边链接
+.head-l {
+    float: left;
+    span,
+    a {
+        display: block;
+        float: left;
+        font-size: $font;
+        margin-left: 4px;
+    }
+}
+
+//右边导航
+.head-r {
+    float: right;
+    width: 520px;
+    line-height: $headh;
+    font-size: $font;
+}
+
+%border-both {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+//导航项
+.h-item {
+    position: relative;
+    float: right;
+    width: 92px;
+    @extend %border-both;
+    text-align: center;
+    ul {
+        display: none;
+        position: absolute;
+        top: 28px;
+        background-color: #fff;
+        width: 100%;
+        text-align: left;
+        @extend %border-both;
+        border-bottom: 1px solid #eee;
+        li {
+            margin-left: 12px;
+        }
+    }
+}
+
+.h-item:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+//鼠标移入后显示列表
+.h-item:hover ul {
+    display: block;
+}
+
+.h-buy {
+    float: right;
+    width: 42px;
+}
