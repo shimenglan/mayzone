@@ -50,6 +50,7 @@ $headh:30px;
         background-color: #fff;
         width: 100%;
         text-align: left;
+        z-index: 10;
         @extend %border-both;
         border-bottom: 1px solid #eee;
         li {

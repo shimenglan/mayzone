@@ -1,0 +1,33 @@
+.title {
+    @extend %wrap;
+    clear: both;
+}
+
+.title-nav {
+    margin-left: 200px;
+    height: 36px;
+}
+
+.title-li {
+    float: left;
+    width: 14%;
+    position: relative;
+    img {
+        position: absolute;
+        top: -2px;
+    }
+    .title-img1 {
+        right: 35px;
+    }
+    .title-img2 {
+        right: 16px;
+    }
+}
+
+.title-link {
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    border-right: 1px solid #dcdcdc;
+    color: #000;
+}

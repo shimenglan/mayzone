@@ -1,0 +1,75 @@
+.section {
+    background-color: #F5F5F5;
+}
+
+.sec-wrap {
+    @extend %wrap;
+    overflow: hidden;
+}
+
+.pro-tit {
+    margin: 16px auto 8px;
+    line-height: 24px;
+    overflow: hidden;
+}
+
+.pro-tit-line {
+    width: 5px;
+    height: 20px;
+    margin-top: 2px;
+    margin-right: 8px;
+    background-color: #FC7E65;
+}
+
+.pro-tit-ch a {
+    font-size: $font16*1.125;
+    color: #000;
+    padding-right: 5px;
+}
+
+.pro-tit-en a {
+    font-size: $font16*0.875;
+    color: #000;
+}
+
+.production {
+    overflow: hidden;
+}
+
+.pro-l {
+    width: 21.13%;
+    img {
+        width: 100%;
+    }
+}
+
+.pro-l-t {
+    width: 260px;
+    height: 390px;
+    margin-bottom: 9px;
+}
+
+.pro-l-b {
+    width: 260px;
+    height: 127px;
+}
+
+.pro-tit-r a {
+    float: left;
+    font-size: $font;
+    margin: 0 15px;
+}
+
+.pro-r {
+    width: 78.04%;
+    // height: 100%;
+    img {
+        width: 100%;
+    }
+}
+
+.pro-r-li {
+    float: left;
+    width: 239px;
+    height: 259px;
+}

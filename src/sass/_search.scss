@@ -1,26 +1,25 @@
 .search {
     @extend %wrap;
-    height: 130px;
+    padding-top: 2%;
 }
 
 //logo
 .logo {
     float: left;
-    width: 150px;
-    height: 115px;
-    padding-left: 5px;
+    width: 15%;
+    padding-left: 0.5%;
+    margin-top: -2.5%;
     img {
-        width: $boxsize;
-        height: $boxsize;
+        width: 100%;
+        height: auto;
     }
 }
 
 //搜索栏
 .sea {
     float: left;
-    padding-top: 25px;
-    width: 490px;
-    margin-left: 70px;
+    width: 49%;
+    margin-left: 7%;
     p {
         height: $font16;
         font-size: $font16*0.875;
@@ -36,8 +35,8 @@
 }
 
 .inputbox {
-    height: 40px;
     background-color: #cc0000;
+    overflow: hidden;
     input {
         width: 79%;
         border: 2px solid #cc0000;
@@ -61,41 +60,62 @@
 //购物车
 %s-right {
     float: right;
-    margin-top: 25px;
-    width: 34px;
-    height: 40px;
+    height: 20px;
+    line-height: 20px;
+    padding: 9px;
     text-align: center;
     color: #555;
     background-color: #FAFAFA;
     border: 1px solid #dddddd;
     position: relative;
-    &:hover .s-buy-massage,
-    &:hover .s-person-massage {
-        display: block;
-    }
-    .s-buy-massage,
-    .s-person-massage {
-        display: none;
-        position: absolute;
-        top: 40px;
-        right: 0;
-    }
     .s-font {
-        line-height: 40px;
+        font-size: $font;
         cursor: pointer;
     }
 }
 
+%massage {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: -1px;
+    z-index: 100;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+}
+
 .s-buy {
-    margin-right: 30px;
     @extend %s-right;
+    width: 106px;
+    &:hover {
+        background-color: #fff;
+        height: 22px;
+        border-bottom: 0px;
+    }
+    &:hover .s-buy-massage {
+        display: block;
+    }
+    &:hover .s-line {
+        display: block;
+    }
+}
+
+%s-line {
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    display: none;
 }
 
 .s-buy-massage {
+    @extend %massage;
     width: 348px;
-    background-color: #fff;
-    border: 1px solid #f0f0f0;
-    z-index: 200;
+    .s-line {
+        width: 124px;
+        @extend %s-line;
+    }
     .s-buy-title {
         height: 30px;
         padding: 7px;
@@ -135,14 +155,29 @@
 .s-person {
     margin-right: 10px;
     @extend %s-right;
+    width: 90px;
+    &:hover {
+        background-color: #fff;
+        height: 22px;
+        border-bottom: 0px;
+    }
+    &:hover .s-person-massage {
+        display: block;
+    }
+    &:hover .s-line {
+        display: block;
+    }
 }
 
 .s-person-massage {
+    @extend %massage;
     width: 308px;
-    background-color: #fff;
-    border: 1px solid #f0f0f0;
     font-size: $font;
     color: #005EA6;
+    .s-line {
+        width: 108px;
+        @extend %s-line;
+    }
     a {
         color: #005EA6;
     }

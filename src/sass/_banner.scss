@@ -1,0 +1,10 @@
+.banner {
+    background-color: #F5F5F5;
+}
+
+.ban-img {
+    @extend %wrap;
+    img {
+        width: 100%;
+    }
+}

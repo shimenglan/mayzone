@@ -1,0 +1,43 @@
+.group {
+    background-color: #F5F5F5;
+    padding: 32px 0;
+}
+
+.group-list {
+    @extend %wrap;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-good {
+    width: 238px;
+    height: 292px;
+    float: left;
+    img {
+        height: 100%;
+    }
+    position: relative;
+}
+
+//销量
+.group-sale {
+    position: absolute;
+    bottom: 18px;
+    right: 82px;
+    font-size: $font;
+}
+
+//加入购物车
+.group-cart {
+    position: absolute;
+    width: 24px;
+    bottom: 18px;
+    right: 8px;
+    font-size: $font;
+    margin-right: 10px;
+    transition: 1s;
+    &:hover {
+        margin-right: 0px;
+    }
+}
