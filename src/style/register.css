@@ -1,0 +1,598 @@
+@charset "utf-8";
+body {
+    background-color: #fafafa;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    margin: 0;
+    padding: 0;
+    min-width: 1230px;
+}
+
+body,
+span,
+a,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ul li,
+ol,
+ol li {
+    list-style-type: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+.clear:after {
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    display: block;
+}
+
+.clear {
+    clear: both;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.mz_fl {
+    float: left;
+}
+
+.mz_fr {
+    float: right;
+}
+
+.mz_clear {
+    clear: both;
+}
+
+a {
+    color: #555;
+}
+
+.height30 {
+    height: 30px;
+}
+
+.height20 {
+    height: 20px;
+}
+
+.height10 {
+    height: 10px;
+}
+
+.height25 {
+    height: 25px;
+}
+
+.height5 {
+    height: 5px;
+}
+
+.mz_nm {
+    width: 1620px;
+    margin: 0 auto;
+}
+
+.mz_nm10 {
+    width: 1000px;
+    margin: auto;
+}
+
+
+/* 头部 */
+
+.si-top {
+    position: relative;
+    width: 990px;
+    height: 120px;
+    margin: 0px auto;
+    vertical-align: middle;
+}
+
+.si-top img {
+    margin-top: 60px;
+    width: 264px;
+    height: 36px;
+    float: left;
+}
+
+.si-top span {
+    position: absolute;
+    display: block;
+    right: 0;
+    font-size: 14px;
+    font-weight: 600;
+    bottom: 0;
+}
+
+.si-top span a {
+    color: #017fcc;
+}
+
+
+/* 注册表 */
+
+.si-container {
+    width: 990px;
+    margin: 0 auto;
+    vertical-align: middle;
+    background-color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.si-container .si-nav {
+    width: 600px;
+    padding-top: 30px;
+    margin: 0 auto;
+    border-bottom: #666666 1px solid;
+}
+
+.si-container .si-nav ul {
+    width: 650px;
+    margin: 0 auto;
+}
+
+.si-container .si-nav ul li {
+    position: relative;
+    bottom: -1px;
+    z-index: 100;
+    width: 120px;
+    float: left;
+    padding: 5px;
+    margin: 0 35px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.si-container .si-nav ul .si-step {
+    position: relative;
+    bottom: -1px;
+    z-index: 100;
+    width: 120px;
+    float: left;
+    padding: 5px;
+    margin: 0 35px;
+    text-align: center;
+    line-height: 20px;
+    color: #ee0b39;
+    border-bottom: #ee0b39 4px solid;
+}
+
+.si-container .si-nav ul .si-step .si-step-01 {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+    background: url(http://www.mayzone360.com/shop/templates/default/images/number-02.png) center no-repeat;
+}
+
+.si-container .si-nav ul li span {
+    background: url(http://www.mayzone360.com/shop/templates/default/images/number-01.png) center no-repeat;
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+}
+
+.si-container .si-container-box {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+.si-container .si-container-box form span {
+    background: url(http://www.mayzone360.com/shop/templates/default/images/si-star.png) center no-repeat;
+    display: block;
+    float: left;
+    width: 12px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.si-container .si-container-box form .si-name {
+    float: left;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.si-container .si-container-box form .si-text {
+    width: 360px;
+    height: 40px;
+    float: left;
+}
+
+.si-container .si-container-box form .si-container-name {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.si-container .si-container-box form .si-container-name input {
+    line-height: 38px;
+    padding-left: 25px;
+}
+
+.si-picture-text {
+    width: 156px;
+    height: 40px;
+    float: left;
+}
+
+.si-yz {
+    float: left;
+    width: 360px;
+}
+
+.si-yz-b {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 10px;
+    width: 110px;
+    background-color: #D0D0D0;
+    float: left;
+}
+
+.green,
+.green1,
+.green2,
+.green3,
+.green4,
+.green5 {
+    width: 20px;
+    height: 20px;
+    background: url(http://www.mayzone360.com/shop/templates/default/images/return.gif) left no-repeat;
+    padding-left: 20px;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    font-size: 12px;
+    color: #008E0B;
+}
+
+.red,
+.red1,
+.red2,
+.red3,
+.red4,
+.red5,
+.red6,
+.red7,
+.red8,
+.red9,
+.red10,
+.red11,
+.red12 {
+    background: url(http://www.mayzone360.com/shop/templates/default/images/false.gif) left no-repeat;
+    padding-left: 20px;
+    position: absolute;
+    top: 10px;
+    font-size: 12px;
+    color: #ee0000;
+    border: 1px solid #FF6600;
+}
+
+.red {
+    right: -13px;
+}
+
+.red1 {
+    right: -172px;
+}
+
+.red2 {
+    right: -110px;
+}
+
+.red3 {
+    right: -14px;
+}
+
+.red4 {
+    right: -100px;
+}
+
+.red5 {
+    right: -110px;
+}
+
+.red6 {
+    right: -148px;
+}
+
+.red7 {
+    right: -2px;
+}
+
+.red8 {
+    right: -2px;
+}
+
+.red9 {
+    right: -38px;
+}
+
+.red10 {
+    right: -2px;
+}
+
+.red11 {
+    right: -26px;
+}
+
+.red12 {
+    right: -14px;
+}
+
+.si-yz-red {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 10px;
+    width: 110px;
+    background-color: #ee0b39;
+    float: left;
+}
+
+.si-yz-yellow {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 10px;
+    width: 110px;
+    background-color: #ffdd33;
+    float: left;
+}
+
+.si-yz-green {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 10px;
+    width: 110px;
+    background-color: #009900;
+    float: left;
+}
+
+.si-yz-text {
+    color: #666666;
+    text-align: center;
+    font-size: 12px;
+    margin: 0 5px;
+    height: 16px;
+    width: 110px;
+    float: left;
+}
+
+.si-password {
+    background: url(http://www.mayzone360.com/shop/templates/default/images/dengl_06.jpg) no-repeat;
+}
+
+.si-picture {
+    margin-left: 10px;
+    width: 132px;
+    height: 40px;
+    float: left;
+}
+
+.si-container .si-container-box form .si-container-name b {
+    display: block;
+    font-size: 12px;
+    color: #000000;
+    margin-left: 10px;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+}
+
+.si-container .si-container-box form .si-container-name b a {
+    display: block;
+    font-size: 12px;
+    color: #ee0b39;
+    height: 20px;
+    line-height: 20px;
+}
+
+.si-container .si-container-box form .si-container-name .si-vcode-text {
+    width: 156px;
+    height: 40px;
+    float: left;
+}
+
+.si-container .si-container-box form .si-container-name .si-vcode {
+    width: 180px;
+    height: 40px;
+    background-color: #fafafa;
+    border: #888888 1px solid;
+    float: left;
+    margin-left: 10px;
+    line-height: 40px;
+    text-align: center;
+    padding-left: 0px !important;
+}
+
+.si-container .si-container-box form .si-container-name .si-vcode a {
+    color: #666666;
+}
+
+.si-next {
+    width: 360px;
+    height: 48px;
+    background-color: #ee0b39;
+    text-align: center;
+    line-height: 48px;
+    margin-left: 110px;
+}
+
+.si-next a {
+    display: block;
+    width: 360px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.bo-si {
+    margin-left: 110px;
+}
+
+.bo-si1 {
+    margin-left: 110px;
+    margin-bottom: 10px;
+}
+
+.bo-si a {
+    display: block;
+    color: #000000;
+}
+
+.bo-si1 form b {
+    width: 280px;
+    display: block;
+    float: left;
+    font-size: 12px;
+    color: #000000;
+}
+
+.bo-si1 form b a {
+    width: 160px;
+    color: #017fcc;
+}
+
+.bo-si1 .si-checked {
+    float: left;
+    margin-right: 10px;
+}
+
+
+/* 尾部 */
+
+.footer {
+    background-color: #fff;
+}
+
+.foot-img,
+.f-ul,
+.f-wrap {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+.footer-img {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.foot-img img {
+    width: 100%;
+}
+
+.f-ul {
+    overflow: hidden;
+}
+
+.f-li {
+    float: left;
+    width: 10%;
+    padding: 2% 5%;
+}
+
+.f-tit {
+    font-size: 15.2px;
+    margin-bottom: 10%;
+}
+
+.f-lists {
+    font-size: 12px;
+    margin: 4% 0;
+}
+
+.f-lists a {
+    color: #000;
+}
+
+.f-lists a:hover {
+    text-decoration: underline;
+}
+
+.f-bottom {
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+}
+
+.f-bottom a {
+    color: #fff;
+}
+
+.f-wrap {
+    padding: 0.8% 0;
+}
+
+.f-bottom-nav,
+.partner {
+    text-align: center;
+    margin: 0.5% auto;
+    line-height: 24px;
+}
+
+.f-bottom-nav a,
+.partner a {
+    padding: 0 0.3%;
+}
+
+.f-bottom-nav a:hover,
+.partner a:hover {
+    text-decoration: underline;
+}
+
+.f-bottom-nav span,
+.partner span {
+    font-size: 16px;
+}
+
+.f-img {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.f-img img {
+    width: 122px;
+    margin: 0 10px;
+}
+
+.f-number {
+    margin: 0.5% auto;
+    text-align: center;
+    line-height: 24px;
+}
+
+.f-number a:hover {
+    text-decoration: underline;
+}
+
+.f-number span {
+    padding: 0 6px;
+}

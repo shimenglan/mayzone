@@ -1,0 +1,324 @@
+@charset "utf-8";
+html,
+body,
+div,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+fieldset,
+input {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+body {
+    font: 12px/20px "微软雅黑", "宋体", Arial, Verdana, "Lucida Grande", "Lucida Sans Unicode", Helvetica, sans-serif;
+    color: #666;
+    min-width: 1230px;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+.mz_fl {
+    float: left;
+}
+
+.mz_fr {
+    float: right;
+}
+
+.mz_clear {
+    clear: both !important;
+}
+
+
+/*login_header*/
+
+.mz_nm99 {
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#mz_login_header {
+    height: 97px;
+    background: #f5f5f5;
+}
+
+#mz_login_header a,
+#mz_login_header span {
+    display: block;
+}
+
+#mz_login_header span {
+    line-height: 97px;
+    margin-left: 15px;
+    font-family: "微软雅黑";
+    font-size: 24px;
+    color: #000;
+}
+
+#mz_login_header a.mz_back_index {
+    height: 25px;
+    padding-left: 27px;
+    background: url(http://www.mayzone360.com/shop/templates/default/images/member/mz_member_BackIndex.jpg) no-repeat 0px 0px;
+    line-height: 25px;
+    margin-top: 37px;
+}
+
+
+/* 内容区 */
+
+#mz_member_main {
+    background: url(http://www.mayzone360.com/shop/templates/default/images/member/mz_member_mainBG.jpg) repeat-x 0px 0px;
+    padding: 115px 0px;
+    background-color: #ff3b3a;
+}
+
+#mz_member_main .mz_nm99 {
+    overflow: hidden;
+}
+
+#mz_member_main .mz_member_mainLeft,
+#mz_member_main .mz_member_mainLeft img {
+    height: 340px;
+    width: 510px;
+    overflow: hidden;
+}
+
+#mz_member_main .mz_member_mainRight {
+    min-height: 320px;
+    width: 370px;
+    border: 1px solid #dcdcdc;
+    overflow: hidden;
+    background-color: #fff;
+    padding-top: 20px;
+}
+
+#mz_member_main .mz_member_mainRight h3 {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 39px;
+    font-size: 18px;
+    color: #000;
+    font-family: "微软雅黑"
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content {
+    padding-bottom: 15px;
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content p {
+    padding-left: 40px;
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentInfo {
+    height: 60px;
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentInfo .text:focus {
+    background-color: #FFF;
+    border-top-color: #999;
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentInfo input,
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentInfo span {
+    float: left;
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentInfo input {
+    height: 38px;
+    line-height: 38px;
+    width: 232px;
+    padding: 0px 3px;
+    border: 1px solid #dcdcdc;
+    color: #444;
+    border-radius: 2px;
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentInfo span {
+    height: 38px;
+    border: 1px solid #dcdcdc;
+    border-right: none;
+    line-height: 38px;
+    width: 49px;
+    text-align: center;
+    font-family: "微软雅黑";
+    border-radius: 2px;
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentSub input {
+    background: url(http://www.mayzone360.com/shop/templates/default/images/member/mz_member_LoginBg.jpg) no-repeat 0px 0px;
+    height: 42px;
+    width: 291px;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    border: none;
+    color: #fff;
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentMore {
+    padding-right: 45px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: #2292d4;
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentMore .register {
+    color: #b00000;
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentMore .forget {
+    color: #118acf;
+    margin-left: 14px;
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentMore span {
+    color: #000;
+}
+
+
+/*忘记密码*/
+
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentInfo img.ml5 {
+    margin-top: 8px;
+}
+
+#mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentInfo a.ml5 {
+    margin-top: 12px;
+}
+
+
+/* 尾部 */
+
+.footer {
+    background-color: #fff;
+}
+
+.foot-img,
+.f-ul,
+.f-wrap {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+.footer-img {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.foot-img img {
+    width: 100%;
+}
+
+.f-ul {
+    overflow: hidden;
+}
+
+.f-li {
+    float: left;
+    width: 10%;
+    padding: 2% 5%;
+}
+
+.f-tit {
+    font-size: 15.2px;
+    margin-bottom: 10%;
+}
+
+.f-lists {
+    font-size: 12px;
+    margin: 4% 0;
+}
+
+.f-lists a {
+    color: #000;
+}
+
+.f-lists a:hover {
+    text-decoration: underline;
+}
+
+.f-bottom {
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+}
+
+.f-bottom a {
+    color: #fff;
+}
+
+.f-wrap {
+    padding: 0.8% 0;
+}
+
+.f-bottom-nav,
+.partner {
+    text-align: center;
+    margin: 0.5% auto;
+    line-height: 24px;
+}
+
+.f-bottom-nav a,
+.partner a {
+    padding: 0 0.3%;
+}
+
+.f-bottom-nav a:hover,
+.partner a:hover {
+    text-decoration: underline;
+}
+
+.f-bottom-nav span,
+.partner span {
+    font-size: 16px;
+}
+
+.f-img {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.f-img img {
+    width: 122px;
+    margin: 0 10px;
+}
+
+.f-number {
+    margin: 0.5% auto;
+    text-align: center;
+    line-height: 24px;
+}
+
+.f-number a:hover {
+    text-decoration: underline;
+}
+
+.f-number span {
+    padding: 0 6px;
+}

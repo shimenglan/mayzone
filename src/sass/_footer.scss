@@ -1,0 +1,96 @@
+//正、全、快、送
+.footer-img {
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.foot-img {
+    @extend %wrap;
+    img {
+        width: 100%;
+    }
+}
+
+//尾部导航
+.f-ul {
+    @extend %wrap;
+    overflow: hidden;
+}
+
+.f-li {
+    float: left;
+    width: 10%;
+    padding: 2% 5%;
+}
+
+.f-tit {
+    font-size: $font16*0.95;
+    margin-bottom: 10%;
+}
+
+.f-lists {
+    font-size: $font;
+    margin: 4% 0;
+    a {
+        color: #000;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+//尾部底黑色区域
+.f-bottom {
+    background-color: #000;
+    color: #fff;
+    font-size: $font;
+    a {
+        color: #fff;
+    }
+}
+
+.f-wrap {
+    @extend %wrap;
+    padding: 0.8% 0;
+}
+
+.f-bottom-nav {
+    text-align: center;
+    margin: 0.5% auto;
+    line-height: 24px;
+    a {
+        padding: 0 0.3%;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.f-bottom-nav span {
+    font-size: $font16;
+}
+
+.partner {
+    @extend .f-bottom-nav;
+}
+
+.f-img {
+    text-align: center;
+    padding-top: 10px;
+    img {
+        width: 122px;
+        margin: 0 10px;
+    }
+}
+
+.f-number {
+    margin: 0.5% auto;
+    text-align: center;
+    line-height: 24px;
+    a:hover {
+        text-decoration: underline;
+    }
+    span {
+        padding: 0 6px;
+    }
+}

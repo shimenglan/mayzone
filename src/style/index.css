@@ -1,4 +1,4 @@
-.head, .search, .title, .menu, .group-list, .ban-img, .sec-wrap {
+.head, .search, .title, .menu, .group-list, .ban-img, .sec-wrap, .foot-img, .f-ul, .f-wrap {
   width: 1230px;
   margin: 0 auto;
 }
@@ -56,7 +56,7 @@ input {
 }
 
 body {
-  min-width: 1000px;
+  min-width: 1230px;
 }
 
 .left {
@@ -418,7 +418,7 @@ body {
 .menu-stair {
   float: left;
   background-color: rgba(238, 238, 238, 0.95);
-  width: 200px;
+  width: 196px;
   position: relative;
   border: 2px solid #f5f5f5;
   height: 496px;
@@ -612,8 +612,19 @@ li.slide-picbox1 {
   color: #000;
 }
 
+.pro-tit-r a {
+  float: left;
+  font-size: 12px;
+  margin: 0 15px;
+}
+.pro-tit-r a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
 .production {
   overflow: hidden;
+  height: 520px;
 }
 
 .pro-l {
@@ -634,12 +645,6 @@ li.slide-picbox1 {
   height: 127px;
 }
 
-.pro-tit-r a {
-  float: left;
-  font-size: 12px;
-  margin: 0 15px;
-}
-
 .pro-r {
   width: 78.04%;
 }
@@ -647,10 +652,103 @@ li.slide-picbox1 {
   width: 100%;
 }
 
+.pro-r-list {
+  height: 520px;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
 .pro-r-li {
   float: left;
   width: 239px;
   height: 259px;
+}
+
+.footer-img {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.foot-img img {
+  width: 100%;
+}
+
+.f-ul {
+  overflow: hidden;
+}
+
+.f-li {
+  float: left;
+  width: 10%;
+  padding: 2% 5%;
+}
+
+.f-tit {
+  font-size: 15.2px;
+  margin-bottom: 10%;
+}
+
+.f-lists {
+  font-size: 12px;
+  margin: 4% 0;
+}
+.f-lists a {
+  color: #000;
+}
+.f-lists a:hover {
+  text-decoration: underline;
+}
+
+.f-bottom {
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+}
+.f-bottom a {
+  color: #fff;
+}
+
+.f-wrap {
+  padding: 0.8% 0;
+}
+
+.f-bottom-nav, .partner {
+  text-align: center;
+  margin: 0.5% auto;
+  line-height: 24px;
+}
+.f-bottom-nav a, .partner a {
+  padding: 0 0.3%;
+}
+.f-bottom-nav a:hover, .partner a:hover {
+  text-decoration: underline;
+}
+
+.f-bottom-nav span, .partner span {
+  font-size: 16px;
+}
+
+.f-img {
+  text-align: center;
+  padding-top: 10px;
+}
+.f-img img {
+  width: 122px;
+  margin: 0 10px;
+}
+
+.f-number {
+  margin: 0.5% auto;
+  text-align: center;
+  line-height: 24px;
+}
+.f-number a:hover {
+  text-decoration: underline;
+}
+.f-number span {
+  padding: 0 6px;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -7,6 +7,7 @@
     overflow: hidden;
 }
 
+//标题
 .pro-tit {
     margin: 16px auto 8px;
     line-height: 24px;
@@ -32,8 +33,20 @@
     color: #000;
 }
 
+.pro-tit-r a {
+    float: left;
+    font-size: $font;
+    margin: 0 15px;
+    &:hover {
+        text-decoration: underline;
+        color: #000;
+    }
+}
+
+//产品
 .production {
     overflow: hidden;
+    height: 520px;
 }
 
 .pro-l {
@@ -54,18 +67,19 @@
     height: 127px;
 }
 
-.pro-tit-r a {
-    float: left;
-    font-size: $font;
-    margin: 0 15px;
-}
-
 .pro-r {
     width: 78.04%;
-    // height: 100%;
     img {
         width: 100%;
     }
+}
+
+.pro-r-list {
+    height: 520px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    flex-wrap: wrap;
 }
 
 .pro-r-li {

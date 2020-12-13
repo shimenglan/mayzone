@@ -1,0 +1,1143 @@
+@charset "utf-8";
+.head,
+.search,
+.foot-img,
+.f-ul,
+.f-wrap {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Microsoft YaHei";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+input {
+    outline: none;
+}
+
+body {
+    min-width: 1230px;
+}
+
+.mz_fl {
+    float: left;
+}
+
+.mz_fr {
+    float: right;
+}
+
+.mz_clear {
+    clear: both !important;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear-float::after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.header {
+    height: 30px;
+    background-color: #eee;
+    border-bottom: 1px solid #dfdfdf;
+    color: #666666;
+}
+
+.head {
+    line-height: 30px;
+}
+
+.head-l {
+    float: left;
+}
+
+.head-l span,
+.head-l a {
+    display: block;
+    float: left;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.head-r {
+    float: right;
+    width: 520px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.h-item,
+.h-item ul {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+.h-item {
+    position: relative;
+    float: right;
+    width: 92px;
+    text-align: center;
+}
+
+.h-item ul {
+    display: none;
+    position: absolute;
+    top: 28px;
+    background-color: #fff;
+    width: 100%;
+    text-align: left;
+    z-index: 10;
+    border-bottom: 1px solid #eee;
+}
+
+.h-item ul li {
+    margin-left: 12px;
+}
+
+.h-item:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.h-item:hover ul {
+    display: block;
+}
+
+.h-buy {
+    float: right;
+    width: 42px;
+}
+
+.search {
+    padding-top: 2%;
+}
+
+.logo {
+    float: left;
+    width: 15%;
+    padding-left: 0.5%;
+    margin-top: -2.5%;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.sea {
+    float: left;
+    width: 49%;
+    margin-left: 7%;
+}
+
+.sea p {
+    height: 16px;
+    font-size: 14px;
+    margin: 1%;
+}
+
+.sea p a {
+    color: #808080;
+    float: left;
+    padding: 0 1%;
+    line-height: 14px;
+    border-right: 1px solid #dcdcdc;
+}
+
+.inputbox {
+    background-color: #cc0000;
+    overflow: hidden;
+}
+
+.inputbox input {
+    width: 79%;
+    border: 2px solid #cc0000;
+    float: left;
+    padding: 2% 0 2% 2%;
+    height: 16px;
+    font-size: 12px;
+}
+
+.inputbox a {
+    display: block;
+    width: 17.5%;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    float: right;
+    line-height: 40px;
+    height: 40px;
+}
+
+.s-buy,
+.s-person {
+    float: right;
+    height: 20px;
+    line-height: 20px;
+    padding: 9px;
+    text-align: center;
+    color: #555;
+    background-color: #FAFAFA;
+    border: 1px solid #dddddd;
+    position: relative;
+}
+
+.s-buy .s-font,
+.s-person .s-font {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.s-buy-massage,
+.s-person-massage {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: -1px;
+    z-index: 100;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+}
+
+.s-buy {
+    width: 106px;
+}
+
+.s-buy:hover {
+    background-color: #fff;
+    height: 22px;
+    border-bottom: 0px;
+}
+
+.s-buy:hover .s-buy-massage {
+    display: block;
+}
+
+.s-buy:hover .s-line {
+    display: block;
+}
+
+.s-buy-massage .s-line,
+.s-person-massage .s-line {
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    display: none;
+}
+
+.s-buy-massage {
+    width: 348px;
+}
+
+.s-buy-massage .s-line {
+    width: 124px;
+}
+
+.s-buy-massage .s-buy-title {
+    height: 30px;
+    padding: 7px;
+    overflow: hidden;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.s-buy-massage .s-buy-title h4 {
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 12px;
+    float: left;
+    margin: 16px 0;
+}
+
+.s-buy-massage .buy-goods {
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+}
+
+.s-buy-massage .s-tocart {
+    background-color: #f0f0f0;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.s-buy-massage .s-tocart a {
+    float: right;
+    line-height: 20px;
+    padding: 4px 8px;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #D93600;
+    border-radius: 4px;
+}
+
+.s-person {
+    margin-right: 10px;
+    width: 90px;
+}
+
+.s-person:hover {
+    background-color: #fff;
+    height: 22px;
+    border-bottom: 0px;
+}
+
+.s-person:hover .s-person-massage {
+    display: block;
+}
+
+.s-person:hover .s-line {
+    display: block;
+}
+
+.s-person-massage {
+    width: 308px;
+    font-size: 12px;
+    color: #005EA6;
+}
+
+.s-person-massage .s-line {
+    width: 108px;
+}
+
+.s-person-massage a {
+    color: #005EA6;
+}
+
+.s-person-massage .person-title {
+    height: 30px;
+    line-height: 30px;
+    list-style: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.s-person-massage .st-menu {
+    overflow: hidden;
+    padding: 8px 0;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+.s-person-massage .st-menu .st-line {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 1px;
+    height: 72px;
+    background-color: #ddd;
+}
+
+.st-menu .left,
+.st-menu .right {
+    text-align: left;
+    width: 138px;
+    overflow: hidden;
+}
+
+.st-menu .left li,
+.st-menu .right li {
+    padding: 4px 0 4px 16px;
+}
+
+.s-history {
+    background-color: #fafafa;
+}
+
+.his-title {
+    overflow: hidden;
+    padding: 6px 8px;
+}
+
+.his-title h4 {
+    font-weight: bold;
+    color: #000;
+}
+
+.s-history .goods {
+    color: #333;
+    line-height: 20px;
+    padding-bottom: 4px;
+}
+
+
+/* 返回首页 */
+
+.toindex {
+    width: 1230px;
+    margin: 0 auto;
+    height: 30px;
+    font-family: '宋体';
+    font-size: 14px;
+    text-indent: 20px;
+    font-weight: bold;
+}
+
+.toindex a {
+    color: #000;
+}
+
+
+/* 其他商品链接 */
+
+.mz_nm {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+.mz_currentPosition {
+    height: 34px;
+    padding-left: 8px;
+}
+
+.mz_currentPosition i.mz_currentPositioni1 {
+    display: inline-block;
+    width: 13px;
+    height: 10px;
+    *height: 10px;
+    _height: 0px;
+    margin-top: 12px;
+    _margin-top: 8px;
+    background: url(http://www.mayzone360.com/shop/templates/default/images/shop/mz_goodsListCBg.png) no-repeat 0px 0px;
+    _background: url(http://www.mayzone360.com/shop/templates/default/images/shop/mz_goodsListCBg.png) no-repeat 0px 4px;
+}
+
+.mz_currentPosition span,
+.mz_currentPosition a {
+    margin-left: 5px;
+    float: left;
+    display: block;
+    line-height: 34px;
+    font-size: 12px;
+}
+
+.mz_currentPosition span.mz_selecter_link_son {
+    border: 1px #c43d4b dotted;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 4px;
+    padding: 2px 3px;
+    color: #c43d4b;
+    cursor: pointer
+}
+
+.mz_currentPosition span.mz_selecter_link_son:hover {
+    border: 1px #c43d4b solid;
+    text-decoration: none;
+}
+
+.mz_currentPosition a.mz_currentPositionLastTal {
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 7px;
+}
+
+.mz_currentPosition a.mz_currentPositionLastTal i.mz_currentPositionLastTali {
+    display: inline-block;
+    width: 9px;
+    height: 6px;
+    *height: 10px;
+    _height: 0px;
+    background: url(http://www.mayzone360.com/shop/templates/default/images/shop/mz_GoodsListBG.jpg) no-repeat 0px 0px;
+    margin-left: 3px;
+    _background: url(http://www.mayzone360.com/shop/templates/default/images/shop/mz_GoodsListBG.jpg) no-repeat 0px 5px;
+}
+
+.mz_currentPosition a.mz_currentPositionLastTalhover {
+    background: #c43d4b;
+    color: #fff;
+    display: inline-block
+}
+
+.mz_currentPosition a.mz_currentPositionLastTalhover i.mz_currentPositionLastTali {
+    background-position: 0px -13px;
+    *background: none;
+}
+
+.mz_currentPosition .mz_currentPositionLastTalDiv {
+    position: relative;
+    z-index: 50;
+    height: 35px;
+}
+
+.mz_currentPosition .mz_currentPositionLastTalDiv .mz_currentPositionLastTalContent {
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    width: 280px;
+    background: #000;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+
+.mz_currentPosition .mz_currentPositionLastTalDiv .mz_currentPositionLastTalContent .mz_currentPositionLastTalContentr {
+    position: relative;
+    padding: 10px 0px;
+}
+
+.mz_currentPosition .mz_currentPositionLastTalDiv .mz_currentPositionLastTalContent .mz_currentPositionLastTalContentr .mz_currentPositionLastTalContenta {
+    position: absolute;
+    width: 7px;
+    height: 4px;
+    top: -4px;
+    left: 20px;
+    background: url(http://www.mayzone360.com/shop/templates/default/images/shop/mz_searchtopBGok.jpg) no-repeat 0px 0px;
+}
+
+.mz_currentPosition .mz_currentPositionLastTalDiv .mz_currentPositionLastTalContent .mz_currentPositionLastTalContentr dl {
+    display: block;
+}
+
+.mz_currentPosition .mz_currentPositionLastTalDiv .mz_currentPositionLastTalContent .mz_currentPositionLastTalContentr dl dd {
+    padding-left: 10px;
+    width: 120px;
+    float: left;
+    text-align: center;
+}
+
+.mz_currentPosition .mz_currentPositionLastTalDiv .mz_currentPositionLastTalContent .mz_currentPositionLastTalContentr dl dd a {
+    color: #fff;
+}
+
+.mz_currentPosition span.mz_currentPositionLast {
+    color: #999;
+    position: relative;
+}
+
+.mz_currentPosition span.mz_currentPositionLast input {
+    height: 20px;
+    width: 142px;
+    line-height: 20px;
+    padding: 0px 10px;
+    margin-top: 0px;
+    *margin-top: 5px;
+    _margin-top: 5px;
+    color: #969696;
+    border: 1px solid #dcdcdc;
+}
+
+.mz_currentPosition span.mz_currentPositionLast a {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: url(http://www.mayzone360.com/shop/templates/default/images/shop/mz_GoodsListBG.jpg) no-repeat right -23px;
+    display: block;
+    height: 16px;
+    width: 18px;
+}
+
+.height10 {
+    height: 10px;
+}
+
+
+/*筛选条件*/
+
+.mz_goodsSearch {
+    border: 1px solid #d7d7d7;
+    border-bottom: none;
+}
+
+.mz_goodsSearch a {
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.mz_goodsSearch a:hover {
+    text-decoration: underline;
+}
+
+.mz_goodsSearch table tr th {
+    min-height: 42px;
+    line-height: 42px;
+    background: #f5f5f5;
+    padding-left: 13px;
+    color: #999;
+    width: 105px;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.mz_goodsSearch table tr td {
+    padding: 5px 17px;
+}
+
+.mz_goodsSearch table tr th,
+.mz_goodsSearch table tr td {
+    border-bottom: 1px solid #d7d7d7;
+    white-space: nowrap
+}
+
+.mz_goodsSearch table tr td a {
+    float: left;
+    margin-right: 33px;
+    color: #404040;
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank {
+    border: 1px solid #d8d9d8;
+    background: #f7f7f7;
+    width: 838px;
+    height: 125px;
+    overflow: hidden;
+    _position: relative;
+    *position: relative
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank a img,
+.mz_goodsSearch table tr td .mz_goodsSearchBrank a {
+    width: 112px;
+    overflow: hidden;
+    text-align: center
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank a img {
+    width: 90px;
+    overflow: hidden;
+    text-align: center;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank a {
+    position: relative;
+    display: block;
+    text-align: center;
+    background: #fff;
+    line-height: 50px;
+    float: left;
+    border: 1px solid #d7d7d7;
+    margin: 5px 0px 5px 5px;
+    _margin: 5px 0px 5px 4px;
+    width: 112px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank a span,
+.mz_goodsSearch table tr td .mz_goodsSearchBrank a i {
+    display: none;
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank a i {
+    background: url(http://www.mayzone360.com/shop/templates/default/images/shop/mz_searchBGok.jpg) no-repeat 0px 0px;
+    height: 13px;
+    width: 13px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 10;
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank a.mz_goodsSearchBrankHover {
+    border: 2px solid #a70f11;
+    height: 48px;
+    width: 110px;
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank a.mz_goodsSearchBrankHover2 {
+    border: 2px solid #806f66;
+    height: 48px;
+    width: 110px;
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank a.mz_goodsSearchBrankHover i {
+    background-position: -13px 0px
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrankSub {
+    height: 25px;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrankSub input {
+    height: 25px;
+    width: 50px;
+    margin: 0px 5px;
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank_more {
+    width: 180px;
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank_more a {
+    /* display: inline-block; */
+    height: 18px;
+    width: 48px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank_more a.mz_goodsSearchBrank_moreOne {
+    background: url(http://www.mayzone360.com/shop/templates/default/images/shop/mz_GoodsListmore.jpg) no-repeat 0px 0px;
+}
+
+.mz_goodsSearch table tr td .mz_goodsSearchBrank_more a.mz_goodsSearchBrank_moreTwo {
+    background: url(http://www.mayzone360.com/shop/templates/default/images/shop/mz_GoodsListBG.jpg) no-repeat 25px -35px;
+    color: #767889;
+    width: 35px;
+    line-height: 18px;
+}
+
+
+/* 排序方式 */
+
+.shop_con_list {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+.sort-bar {
+    background: #F7F7F7;
+    display: block;
+    height: 36px;
+    border: solid 1px #D7D7D7;
+}
+
+
+/* 翻页样式 */
+
+.pagination {
+    /* display: inline-block; */
+    overflow: hidden;
+}
+
+.pagination ul {
+    font-size: 0;
+    *word-spacing: -1px/*IE6、7*/
+    ;
+}
+
+.bottom-page {
+    padding: 20px 0;
+    width: 430px;
+    margin: 0 auto;
+}
+
+.pagination ul li {
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    margin: 0 0 0 -1px;
+}
+
+.pagination ul li {
+    *display: inline/*IE6、7*/
+    ;
+    *zoom: 1;
+}
+
+.pagination li span {
+    font: normal 14px/20px "microsoft yahei";
+    color: #AAA;
+    background-color: #FAFAFA;
+    text-align: center;
+    display: block;
+    min-width: 20px;
+    padding: 8px;
+    border: 1px solid #E6E6E6;
+    position: relative;
+    z-index: 1;
+}
+
+.pagination li a span,
+.pagination li a:visited span {
+    color: #005AA0;
+    text-decoration: none;
+    background-color: #FFF;
+    position: relative;
+    z-index: 1;
+}
+
+.pagination li a:hover span,
+.pagination li a:active span {
+    color: #FFF;
+    text-decoration: none !important;
+    background-color: #D93600;
+    border-color: #CA3300;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.pagination li a:hover {
+    text-decoration: none;
+}
+
+.pagination li span.currentpage {
+    color: #AAA;
+    font-weight: bold;
+    background-color: #FAFAFA;
+    border-color: #E6E6E6;
+    position: relative;
+    z-index: 2;
+}
+
+.sort-bar .pagination {
+    /* display: inline-block; */
+    float: right;
+    margin: 7px 5px 0 0
+}
+
+.sort-bar .pagination ul {
+    font-size: 0;
+    *word-spacing: -1px/*IE6、7*/
+    ;
+}
+
+.sort-bar .pagination ul li {
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.sort-bar .pagination ul li {
+    *display: inline/*IE6、7*/
+    ;
+    *zoom: 1;
+}
+
+.sort-bar .pagination li span {
+    font: normal 12px/16px "microsoft yahei";
+    color: #AAA;
+    background-color: #FAFAFA;
+    text-align: center;
+    display: block;
+    min-width: 16px;
+    padding: 2px 6px;
+    border: 1px solid #E6E6E6;
+    position: relative;
+    z-index: 1;
+}
+
+.sort-bar .pagination li a span {
+    color: #005AA0;
+    text-decoration: none;
+    background-color: #FFF;
+    position: relative;
+    z-index: 1;
+}
+
+.sort-bar .pagination li a:hover span {
+    color: #FFF;
+    text-decoration: none;
+    background-color: #D93600;
+    border-color: #CA3300;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+}
+
+
+/* 排序样式 */
+
+.nch-sortbar-array {
+    font: 12px/36px "microsoft yahei";
+    color: #777;
+    vertical-align: top;
+    display: inline-block;
+    *display: inline/*IE6,7*/
+    ;
+    padding: 0 10px 0 10px;
+    *zoom: 1;
+}
+
+.nch-sortbar-array ul {
+    font-size: 0;
+    *word-spacing: -1px/*IE6、7*/
+    ;
+    vertical-align: middle;
+    display: inline-block;
+    *display: inline/*IE6,7*/
+    ;
+    border-right: solid 1px #E6E6E6;
+    *zoom: 1;
+}
+
+.nch-sortbar-array li {
+    font: 12px/20px "microsoft yahei";
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    *display: inline/*IE6,7*/
+    ;
+    border-left: solid 1px #E6E6E6;
+    *zoom: 1;
+    _width: 60px;
+    text-align: center;
+}
+
+.nch-sortbar-array li a {
+    line-height: 20px;
+    color: #555;
+    display: block;
+    height: 20px;
+    padding: 8px 13px 8px 12px;
+}
+
+.nch-sortbar-array li a i {
+    background: url(http://www.mayzone360.com/shop/templates/default/images/2014shop_background_img.png) no-repeat 0 -11px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 7px;
+    height: 8px;
+    margin-left: 4px;
+}
+
+.nch-sortbar-array li.selected,
+.nch-sortbar-array li:hover {
+    background-color: #FFF;
+}
+
+.nch-sortbar-array li.selected a,
+.nch-sortbar-array li:hover a {
+    color: #D93600;
+}
+
+.nch-sortbar-array li a:hover {
+    text-decoration: none;
+}
+
+.nch-sortbar-array li.selected a.asc i {
+    background-position: -14px -11px;
+}
+
+.nch-sortbar-array li.selected a.desc i,
+.nch-sortbar-array li:hover a i {
+    background-position: -7px -11px;
+}
+
+.mz_GoodsMoney {
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    height: 22px;
+    width: 101px;
+}
+
+.mz_GoodsMoney input,
+.mz_GoodsMoney span {
+    float: left;
+}
+
+.mz_GoodsMoney span {
+    margin: 0px 1px;
+}
+
+.mz_GoodsMoney input {
+    width: 32px;
+    height: 22px;
+    border: none;
+    border-right: 1px solid #ccc;
+    background: url(http://www.mayzone360.com/shop/templates/default/images/shop/mz_GoodsMoneyBg.jpg) #fff no-repeat 0px 0px;
+    padding-left: 13px;
+}
+
+.mz_GoodsMoney input.mz_GoodsMoneyRight {
+    border: none;
+    border-left: 1px solid #ccc;
+    color: #555;
+}
+
+input,
+button,
+select,
+textarea {
+    outline: none
+}
+
+input,
+select,
+textarea {
+    font: 12px/20px Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
+
+input,
+button {
+    border: none;
+}
+
+.mz_GoodsMoney input.mz_GoodsMoneyRight {
+    border: none;
+    border-left: 1px solid #ccc;
+    color: #555;
+}
+
+
+/* 尾部 */
+
+.footer {
+    background-color: #fff;
+}
+
+.foot-img,
+.f-ul,
+.f-wrap {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+.footer-img {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.foot-img img {
+    width: 100%;
+}
+
+.f-ul {
+    overflow: hidden;
+}
+
+.f-li {
+    float: left;
+    width: 10%;
+    padding: 2% 5%;
+}
+
+.f-tit {
+    font-size: 15.2px;
+    margin-bottom: 10%;
+}
+
+.f-lists {
+    font-size: 12px;
+    margin: 4% 0;
+}
+
+.f-lists a {
+    color: #000;
+}
+
+.f-lists a:hover {
+    text-decoration: underline;
+}
+
+.f-bottom {
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+}
+
+.f-bottom a {
+    color: #fff;
+}
+
+.f-wrap {
+    padding: 0.8% 0;
+}
+
+.f-bottom-nav,
+.partner {
+    text-align: center;
+    margin: 0.5% auto;
+    line-height: 24px;
+}
+
+.f-bottom-nav a,
+.partner a {
+    padding: 0 0.3%;
+}
+
+.f-bottom-nav a:hover,
+.partner a:hover {
+    text-decoration: underline;
+}
+
+.f-bottom-nav span,
+.partner span {
+    font-size: 16px;
+}
+
+.f-img {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.f-img img {
+    width: 122px;
+    margin: 0 10px;
+}
+
+.f-number {
+    margin: 0.5% auto;
+    text-align: center;
+    line-height: 24px;
+}
+
+.f-number a:hover {
+    text-decoration: underline;
+}
+
+.f-number span {
+    padding: 0 6px;
+}

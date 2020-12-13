@@ -1,5 +1,5 @@
 //定义首页模块
-define([], () => {
+define(['jlazyload'], () => {
     return {
         init: function() {
             //边框颜色变化
@@ -72,6 +72,28 @@ define([], () => {
                 timer_line = setInterval(redLine, 3000);
             });
             //产品数据渲染
+            $.ajax({
+                url: 'http://localhost/dashboard/mayzone/php/indexdata.php',
+                dataType: 'json'
+            }).done(function(data) {
+                let $strhtml = '';
+                $.each(data, function(index, value) {
+                    $strhtml += `
+                        <li class="pro-r-li">
+                            <a href="${value.linkurl}">
+                                <img class="lazy" data-original="${value.imgurl}"/>
+                            </a>
+                        </li>
+                    `;
+                });
+                $('.pro-r-list').html($strhtml);
+                //懒加载
+                $(function() {
+                    $('img.lazy').lazyload({
+                        effect: "fadeIn" //显示方法：谈入
+                    });
+                });
+            });
         }
     };
 })

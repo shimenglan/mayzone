@@ -1,0 +1,1430 @@
+@charset "utf-8";
+.head,
+.search,
+.foot-img,
+.f-ul,
+.f-wrap {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Microsoft YaHei";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+input {
+    outline: none;
+}
+
+body {
+    min-width: 1230px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.mz_fl {
+    float: left;
+}
+
+.mz_fr {
+    float: right;
+}
+
+.mz_clear {
+    clear: both !important;
+}
+
+.height10 {
+    height: 10px;
+}
+
+.clear-float::after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.header {
+    height: 30px;
+    background-color: #eee;
+    border-bottom: 1px solid #dfdfdf;
+    color: #666666;
+}
+
+.head {
+    line-height: 30px;
+}
+
+.head-l {
+    float: left;
+}
+
+.head-l span,
+.head-l a {
+    display: block;
+    float: left;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.head-r {
+    float: right;
+    width: 520px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.h-item,
+.h-item ul {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+.h-item {
+    position: relative;
+    float: right;
+    width: 92px;
+    text-align: center;
+}
+
+.h-item ul {
+    display: none;
+    position: absolute;
+    top: 28px;
+    background-color: #fff;
+    width: 100%;
+    text-align: left;
+    z-index: 10;
+    border-bottom: 1px solid #eee;
+}
+
+.h-item ul li {
+    margin-left: 12px;
+}
+
+.h-item:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.h-item:hover ul {
+    display: block;
+}
+
+.h-buy {
+    float: right;
+    width: 42px;
+}
+
+.search {
+    padding-top: 2%;
+}
+
+.logo {
+    float: left;
+    width: 15%;
+    padding-left: 0.5%;
+    margin-top: -2.5%;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.sea {
+    float: left;
+    width: 49%;
+    margin-left: 7%;
+}
+
+.sea p {
+    height: 16px;
+    font-size: 14px;
+    margin: 1%;
+}
+
+.sea p a {
+    color: #808080;
+    float: left;
+    padding: 0 1%;
+    line-height: 14px;
+    border-right: 1px solid #dcdcdc;
+}
+
+.inputbox {
+    background-color: #cc0000;
+    overflow: hidden;
+}
+
+.inputbox input {
+    width: 79%;
+    border: 2px solid #cc0000;
+    float: left;
+    padding: 2% 0 2% 2%;
+    height: 16px;
+    font-size: 12px;
+}
+
+.inputbox a {
+    display: block;
+    width: 17.5%;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    float: right;
+    line-height: 40px;
+    height: 40px;
+}
+
+.s-buy,
+.s-person {
+    float: right;
+    height: 20px;
+    line-height: 20px;
+    padding: 9px;
+    text-align: center;
+    color: #555;
+    background-color: #FAFAFA;
+    border: 1px solid #dddddd;
+    position: relative;
+}
+
+.s-buy .s-font,
+.s-person .s-font {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.s-buy-massage,
+.s-person-massage {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: -1px;
+    z-index: 100;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+}
+
+.s-buy {
+    width: 106px;
+}
+
+.s-buy:hover {
+    background-color: #fff;
+    height: 22px;
+    border-bottom: 0px;
+}
+
+.s-buy:hover .s-buy-massage {
+    display: block;
+}
+
+.s-buy:hover .s-line {
+    display: block;
+}
+
+.s-buy-massage .s-line,
+.s-person-massage .s-line {
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    display: none;
+}
+
+.s-buy-massage {
+    width: 348px;
+}
+
+.s-buy-massage .s-line {
+    width: 124px;
+}
+
+.s-buy-massage .s-buy-title {
+    height: 30px;
+    padding: 7px;
+    overflow: hidden;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.s-buy-massage .s-buy-title h4 {
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 12px;
+    float: left;
+    margin: 16px 0;
+}
+
+.s-buy-massage .buy-goods {
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+}
+
+.s-buy-massage .s-tocart {
+    background-color: #f0f0f0;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.s-buy-massage .s-tocart a {
+    float: right;
+    line-height: 20px;
+    padding: 4px 8px;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #D93600;
+    border-radius: 4px;
+}
+
+.s-person {
+    margin-right: 10px;
+    width: 90px;
+}
+
+.s-person:hover {
+    background-color: #fff;
+    height: 22px;
+    border-bottom: 0px;
+}
+
+.s-person:hover .s-person-massage {
+    display: block;
+}
+
+.s-person:hover .s-line {
+    display: block;
+}
+
+.s-person-massage {
+    width: 308px;
+    font-size: 12px;
+    color: #005EA6;
+}
+
+.s-person-massage .s-line {
+    width: 108px;
+}
+
+.s-person-massage a {
+    color: #005EA6;
+}
+
+.s-person-massage .person-title {
+    height: 30px;
+    line-height: 30px;
+    list-style: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.s-person-massage .st-menu {
+    overflow: hidden;
+    padding: 8px 0;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+.s-person-massage .st-menu .st-line {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 1px;
+    height: 72px;
+    background-color: #ddd;
+}
+
+.st-menu .left,
+.st-menu .right {
+    text-align: left;
+    width: 138px;
+    overflow: hidden;
+}
+
+.st-menu .left li,
+.st-menu .right li {
+    padding: 4px 0 4px 16px;
+}
+
+.s-history {
+    background-color: #fafafa;
+}
+
+.his-title {
+    overflow: hidden;
+    padding: 6px 8px;
+}
+
+.his-title h4 {
+    font-weight: bold;
+    color: #000;
+}
+
+.s-history .goods {
+    color: #333;
+    line-height: 20px;
+    padding-bottom: 4px;
+}
+
+.banner {
+    background-color: #D93600;
+}
+
+.banner-wrap {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+.banner-wrap img {
+    width: 100%;
+}
+
+.ncs-nav {
+    background-color: #D93600;
+}
+
+.mz_nm {
+    width: 1230px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.normal {
+    float: left;
+    line-height: 36px;
+    padding: 0 15px;
+}
+
+.normal a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* 链接 */
+
+.mz_currentPosition {
+    height: 34px;
+    padding-left: 8px;
+    margin: 0 auto;
+    width: 1230px;
+    font-size: 12px;
+    line-height: 34px;
+}
+
+.mz_currentPositioni1 {
+    display: inline-block;
+    width: 13px;
+    height: 10px;
+    margin-top: 12px;
+    background: url(http://www.mayzone360.com/shop/templates/default/images/shop/mz_goodsListCBg.png) no-repeat 0px 0px;
+}
+
+.mz_currentPosition span,
+.mz_currentPosition a {
+    margin-left: 5px;
+    float: left;
+    display: block;
+    line-height: 34px;
+    font-size: 1.04em;
+}
+
+.mz_currentPosition a:hover {
+    color: #D93600;
+    text-decoration: underline;
+}
+
+
+/* 商品详情 */
+
+.ncs-detail {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto 10px;
+    width: 1230px;
+    overflow: hidden;
+}
+
+
+/*产品图片*/
+
+#mz_shopGoodsImgs {
+    width: 420px;
+    float: left;
+}
+
+.preview {
+    width: 420px;
+    float: left;
+}
+
+.preview .bigImg {
+    position: relative;
+    float: left;
+    width: 418px;
+    height: 418px;
+    overflow: hidden;
+    border: 1px solid #dcdcdc;
+    text-align: center;
+}
+
+.preview .bigImg img {
+    width: 418px;
+}
+
+.preview .bigImg #winSelector {
+    width: 235px;
+    height: 210px;
+}
+
+
+/* smallImg */
+
+.preview .smallImg {
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+    float: left;
+    padding: 20px;
+}
+
+.preview .smallImg #imageMenu {
+    height: 60px;
+    margin-left: 0;
+    float: left;
+    overflow: hidden;
+    width: 375px;
+}
+
+.preview .smallImg #imageMenu ul {
+    margin: 0px;
+    padding: 0px;
+    height: 60px;
+    width: 10000px;
+}
+
+.preview .smallImg #imageMenu ul li {
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+    float: left;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 5px;
+    overflow: hidden
+}
+
+.preview .smallImg #imageMenu ul li img {
+    width: 58px;
+    height: 58px;
+    cursor: pointer;
+    border: 1px #dcdcdc solid;
+}
+
+.preview .smallImg #imageMenu ul li#onlickImg img,
+.preview .smallImg #imageMenu ul li:hover img {
+    width: 56px;
+    height: 56px;
+    border: 2px solid #000;
+}
+
+.preview .smallImg #imageMenu ul li:hover img {
+    border: 2px solid #888;
+}
+
+.scrollbutton {
+    width: 14px;
+    height: 60px;
+    position: absolute;
+    float: left;
+    cursor: pointer;
+}
+
+.scrollbutton.smallImgUp {
+    background: url(http://www.mayzone360.com/shop/templates/default/images/shop/d_08.png) no-repeat;
+    left: 5px;
+    top: 25px;
+}
+
+.scrollbutton.smallImgDown {
+    background: url(http://www.mayzone360.com/shop/templates/default/images/shop/d_09.png) no-repeat;
+    top: 25px;
+    right: 0px;
+}
+
+
+/* bigImg */
+
+#winSelector {
+    position: absolute;
+    cursor: crosshair;
+    filter: alpha(opacity=15);
+    -moz-opacity: 0.15;
+    opacity: 0.15;
+    background-color: #000;
+    border: 1px solid #fff;
+}
+
+
+/* bigView */
+
+#bigView {
+    position: absolute;
+    border: 1px solid #dcdcdc;
+    overflow: hidden;
+    z-index: 999;
+}
+
+#bigView img {
+    position: absolute;
+}
+
+.mz_shopGoodsImgsMore {
+    font-size: 12px;
+}
+
+
+/* 右边商品基本信息 */
+
+.ncs-goods-summary {
+    width: 569px;
+    margin-left: 20px;
+    height: 100%;
+}
+
+.ncs-goods-summary .name {
+    padding-bottom: 10px;
+}
+
+.ncs-goods-summary .name h1,
+.ncs-goods-summary .name strong {
+    font: 700 16px/1.5em "Microsoft Yahei";
+    display: block;
+}
+
+.ncs-goods-summary .name h1 {
+    font-size: 15px;
+    color: #000;
+    font-weight: bold
+}
+
+.ncs-goods-summary .name strong {
+    color: #676767;
+    font-size: 16px;
+    font-weight: normal;
+    color: #e00
+}
+
+
+/*  */
+
+
+/* 销售信息 */
+
+.ncs-meta {
+    width: 560px;
+}
+
+.ncs-key {
+    width: 560px;
+    padding-top: 6px;
+    margin-top: 4px;
+}
+
+
+/**/
+
+.w30 {
+    font: 12px/20px Tahoma;
+    color: #777;
+    background-color: #FFF;
+    vertical-align: top;
+    display: inline-block;
+    height: 20px;
+    padding: 4px;
+    border: solid 1px #CCC;
+    outline: 0 none;
+}
+
+.mz_shopGoodsMoneyBg {
+    background: #fdf8e4;
+}
+
+.ncs-meta dl,
+.ncs-key dl {
+    font-size: 0;
+    padding: 5px 0px;
+}
+
+.ncs-meta dl dt,
+.ncs-meta dl dd,
+.ncs-key dl dt,
+.ncs-key dl dd {
+    font-size: 12px;
+    line-height: 20px;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    ;
+    min-height: 20px;
+    padding: 4px 0;
+    *zoom: 1;
+}
+
+.ncs-meta dl dt,
+.ncs-key dl dt {
+    font-family: simsun;
+    text-align: right;
+    width: 13%;
+    margin-right: 1%;
+    color: #999;
+    font-family: "Microsoft Yahei";
+}
+
+.ncs-meta dl dd,
+.ncs-key dl dd {
+    text-align: left;
+    width: 86%;
+    color: #343235;
+    font-family: "Microsoft Yahei";
+}
+
+.ncs-key dl dd.ncs-figure-input2 {
+    color: #fe4502;
+}
+
+.ncs-meta dl dd i.ver-line {
+    display: inline-block;
+    zoom: 1;
+}
+
+.ncs-meta dl dd a {
+    color: #005AA0;
+    vertical-align: top;
+    display: inline-block;
+    ;
+    *zoom: 1;
+}
+
+.ncs-meta dl dd a:hover {
+    text-decoration: underline;
+}
+
+.ncs-meta dl.mz_shop_GoodsAttached {
+    height: 36px;
+    border-top: 1px dotted #c9c9c9;
+    border-bottom: 1px dotted #c9c9c9;
+    overflow: hidden;
+}
+
+.ncs-meta dl.mz_shop_GoodsAttached dd {
+    width: 170px;
+    float: left;
+    text-align: center;
+    height: 16px;
+    border-left: 1px solid #e4dfd9;
+    margin-top: 5px;
+    margin-left: -1px;
+    color: #999;
+}
+
+.ncs-meta dl.mz_shop_GoodsAttached dd span {
+    color: #c40001;
+    font-weight: bold;
+}
+
+.ncs-meta .price strong {
+    font-size: 24px;
+    font-weight: 600;
+    color: #c50000;
+    vertical-align: middle;
+}
+
+.ncs-meta .price strong b {
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.ncs-meta .price span {
+    line-height: 13px;
+    color: #FFF;
+    display: inline-block;
+    padding-left: 5px;
+    background: url(http://www.mayzone360.com/shop/templates/default/images/goods_tagbg.png) no-repeat;
+    vertical-align: middle;
+    width: 60px;
+    height: 15px;
+    padding: 1px 5px;
+    text-align: center;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+.ncs-meta dl dd.cost-promotion-time {
+    color: #f33000
+}
+
+.ncs-meta .price span.mz_money_pre {
+    background: none;
+    margin-right: 2px;
+    color: #c50000;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.ncs-meta .price em {
+    color: #999;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.ncs-meta .cost-price strong {
+    text-decoration: line-through;
+    color: #1f201b;
+}
+
+.ncs-meta .promotion-info {
+    color: #D93600
+}
+
+.ncs-meta .promotion-info em {
+    color: #690;
+    vertical-align: middle;
+    margin: 2px 0 12px 0;
+}
+
+.ncs-meta .promotion-info span {
+    color: #999;
+    vertical-align: middle;
+}
+
+
+/* 购买数量 */
+
+
+/* 销售信息 */
+
+.ncs-meta {
+    width: 560px;
+}
+
+.ncs-key {
+    width: 560px;
+    padding-top: 6px;
+    margin-top: 4px;
+}
+
+
+/**/
+
+.mz_shopGoodsMoneyBg {
+    background: #fdf8e4;
+}
+
+.ncs-meta dl,
+.ncs-key dl {
+    font-size: 0;
+    padding: 5px 0px;
+}
+
+.ncs-meta dl dt,
+.ncs-meta dl dd,
+.ncs-key dl dt,
+.ncs-key dl dd {
+    font-size: 12px;
+    line-height: 20px;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    min-height: 20px;
+    padding: 4px 0;
+    *zoom: 1;
+}
+
+.ncs-meta dl dt,
+.ncs-key dl dt {
+    font-family: simsun;
+    text-align: right;
+    width: 13%;
+    margin-right: 1%;
+    color: #999;
+    font-family: "Microsoft Yahei";
+}
+
+.ncs-meta dl dd,
+.ncs-key dl dd {
+    text-align: left;
+    width: 86%;
+    color: #343235;
+    font-family: "Microsoft Yahei";
+}
+
+.ncs-key dl dd.ncs-figure-input2 {
+    color: #fe4502;
+}
+
+.ncs-meta dl dd i.ver-line {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.ncs-meta dl dd a {
+    color: #005AA0;
+    vertical-align: top;
+    display: inline-block;
+    *zoom: 1;
+}
+
+.ncs-meta dl dd a:hover {
+    text-decoration: underline;
+}
+
+.ncs-meta dl.mz_shop_GoodsAttached {
+    height: 36px;
+    border-top: 1px dotted #c9c9c9;
+    border-bottom: 1px dotted #c9c9c9;
+    overflow: hidden;
+}
+
+.ncs-meta dl.mz_shop_GoodsAttached dd {
+    width: 170px;
+    float: left;
+    text-align: center;
+    height: 16px;
+    border-left: 1px solid #e4dfd9;
+    margin-top: 5px;
+    margin-left: -1px;
+    color: #999;
+}
+
+.ncs-meta dl.mz_shop_GoodsAttached dd span {
+    color: #c40001;
+    font-weight: bold;
+}
+
+.ncs-meta .price strong {
+    font-size: 24px;
+    font-weight: 600;
+    color: #c50000;
+    vertical-align: middle;
+}
+
+.ncs-meta .price strong b {
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.ncs-meta .price span {
+    line-height: 13px;
+    color: #FFF;
+    display: inline-block;
+    padding-left: 5px;
+    background: url(http://www.mayzone360.com/shop/templates/default/images/goods_tagbg.png) no-repeat;
+    vertical-align: middle;
+    width: 60px;
+    height: 15px;
+    padding: 1px 5px;
+    *padding: 2px 3px 0 5px;
+    text-align: center;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+.ncs-meta dl dd.cost-promotion-time {
+    color: #f33000
+}
+
+.ncs-meta .price span.mz_money_pre {
+    background: none;
+    margin-right: 2px;
+    color: #c50000;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.ncs-meta .price em {
+    color: #999;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.ncs-meta .cost-price strong {
+    text-decoration: line-through;
+    color: #1f201b;
+}
+
+.ncs-meta .promotion-info {
+    color: #D93600
+}
+
+.ncs-meta .promotion-info em {
+    color: #690;
+    vertical-align: middle;
+    margin: 2px 0 12px 0;
+}
+
+.ncs-meta .promotion-info span {
+    color: #999;
+    vertical-align: middle;
+}
+
+
+/*规格值的选择*/
+
+.ncs-key ul {
+    font-size: 0;
+}
+
+.ncs-key ul li {
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.ncs-key ul li a {
+    display: block;
+    min-height: 30px;
+    padding: 1px;
+    border: 1px solid #E7E7E7;
+    cursor: pointer;
+}
+
+.ncs-key ul li.sp-img a {
+    line-height: 0;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    *display: block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.ncs-key ul li.sp-img a img {
+    max-width: 50px;
+    max-height: 50px;
+    /* margin-top: expression(50-this.height/2); */
+}
+
+.ncs-key ul li.sp-txt a {
+    font-size: 12px;
+    line-height: 30px;
+    color: #000;
+    text-decoration: none;
+    background: #FFF none;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 20px;
+    height: 30px;
+    padding: 0 5px !important;
+    margin: 1px;
+}
+
+.ncs-key ul li.sp-img a:hover,
+.ncs-key ul li.sp-img a.hovered {
+    border: 2px solid #D93600;
+    padding: 0;
+}
+
+.ncs-key ul li.sp-txt a:hover,
+.ncs-key ul li.sp-txt a.hovered {
+    border: 2px solid #D93600;
+    margin: 0;
+}
+
+.ncs-key ul li a i {
+    display: none;
+}
+
+.ncs-key ul li a.hovered i {
+    font-size: 0;
+    line-height: 0;
+    background: url(http://www.mayzone360.com/shop/templates/default/images/shop/2014_ncs_public_img.png) no-repeat 0 0;
+    display: block;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    z-index: 1;
+    right: 2px;
+    bottom: 2px;
+}
+
+
+/*购买数量和库存*/
+
+.ncs-figure-input {
+    position: relative;
+    z-index: 1;
+}
+
+.ncs-figure-input a {
+    font: 11px/12px sans-serif, serif, Arial;
+    color: #AAA;
+    background-color: #FFF;
+    text-align: center;
+    display: block;
+    width: 16px;
+    height: 12px;
+    border: solid 1px #CCC;
+    position: absolute;
+    z-index: 1;
+    left: 52px;
+    -webkit-text-size-adjust: none;
+}
+
+.ncs-figure-input a:hover {
+    color: #D93600;
+    border-color: #D93600;
+    text-decoration: none;
+}
+
+.ncs-figure-input a.increase {
+    top: 4px;
+}
+
+.ncs-figure-input a.decrease {
+    top: 20px;
+}
+
+.ncs-figure-input em {
+    font-style: normal;
+    margin-left: 30px;
+    color: #999;
+}
+
+.ncs-figure-input em strong {
+    font-weight: 600;
+    color: #555;
+    vertical-align: top;
+    margin: 0 4px;
+}
+
+
+/* 购买提示信息 */
+
+.ncs-point span {
+    line-height: 20px;
+    display: inline-block;
+    height: 20px;
+    padding: 5px;
+    margin-left: 75px;
+}
+
+.ncs-point .yes {
+    color: #D93600;
+}
+
+.ncs-point .no {
+    font-weight: 600;
+    color: #D93600;
+}
+
+
+/* 立即购买和加入购物车按钮 */
+
+.ncs-goods-summary .ncs-btn {
+    display: inline-block;
+    height: 32px;
+    padding-right: 10px;
+    margin: 10px 0 0 0;
+    position: relative;
+    z-index: 70;
+}
+
+.ncs-goods-summary .ncs-btn a.buynow,
+.ncs-goods-summary .ncs-btn a.addcart,
+.ncs-goods-summary .ncs-btn a.no-buynow,
+.ncs-goods-summary .ncs-btn a.no-addcart {
+    font: lighter 16px/20px "Microsoft Yahei";
+    color: #FFF;
+    text-align: center;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    margin-right: 10px;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.25);
+}
+
+.ncs-goods-summary .ncs-btn a.buynow:hover,
+.ncs-goods-summary .ncs-btn a.addcart:hover,
+.ncs-goods-summary .ncs-btn a.no-buynow:hover,
+.ncs-goods-summary .ncs-btn a.no-addcart:hover {
+    text-decoration: none;
+}
+
+.ncs-goods-summary .ncs-btn a.buynow {
+    background-color: #ffeded;
+    border: 1px solid #c40001;
+    color: #c40001;
+    width: 178px;
+    margin-left: 75px;
+    margin-top: 10px;
+}
+
+.ncs-goods-summary .ncs-btn a:hover.buynow {
+    background-color: #c40001;
+    color: #fff;
+}
+
+.ncs-goods-summary .ncs-btn a.addcart {
+    background-color: #c40001;
+    height: 40px;
+    line-height: 40px;
+    width: 180px;
+    text-align: center;
+}
+
+.ncs-goods-summary .ncs-btn a:hover.addcart {
+    background-color: #BB0000;
+}
+
+.ncs-goods-summary .ncs-btn a.no-buynow,
+.ncs-goods-summary .ncs-btn a.no-addcart {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+.ncs-goods-summary .ncs-btn a:hover.no-buynow,
+.ncs-goods-summary .ncs-btn a:hover.no-addcart {
+    background-color: #333;
+}
+
+.ncs-goods-summary .ncs-btn a i {
+    font-size: 17px;
+    margin-right: 6px;
+}
+
+
+/* 加入购物车弹出提示框 */
+
+.ncs-cart-popup {
+    background-color: #F5F5F5;
+    display: none;
+    width: 320px;
+    height: 120px;
+    border: solid 1px #D7D7D7;
+    box-shadow: 0 0 3px rgba(153, 153, 153, 0.25);
+    position: absolute;
+    z-index: 1;
+    top: 72px;
+    left: -1px;
+}
+
+.ncs-cart-popup dl {
+    display: block;
+}
+
+.ncs-cart-popup dl dt {
+    font: lighter 16px/20px "Microsoft Yahei";
+    color: #333;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0 5px 0;
+}
+
+.ncs-cart-popup dl dt a {
+    font: 10px/12px Verdana;
+    color: #999;
+    text-align: center;
+    width: 12px;
+    height: 12px;
+    float: right;
+    margin: -5px 5px 0 0;
+    cursor: pointer;
+}
+
+.ncs-cart-popup dl dt a:hover {
+    text-decoration: none;
+    color: #333;
+}
+
+.ncs-cart-popup dl dd {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 5px 0;
+}
+
+
+/* 矢量图标获取 */
+
+.icon-shopping-cart:before {
+    content: "\f07a";
+}
+
+
+/* 尾部 */
+
+.footer {
+    background-color: #fff;
+}
+
+.foot-img,
+.f-ul,
+.f-wrap {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+.footer-img {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.foot-img img {
+    width: 100%;
+}
+
+.f-ul {
+    overflow: hidden;
+}
+
+.f-li {
+    float: left;
+    width: 10%;
+    padding: 2% 5%;
+}
+
+.f-tit {
+    font-size: 15.2px;
+    margin-bottom: 10%;
+}
+
+.f-lists {
+    font-size: 12px;
+    margin: 4% 0;
+}
+
+.f-lists a {
+    color: #000;
+}
+
+.f-lists a:hover {
+    text-decoration: underline;
+}
+
+.f-bottom {
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+}
+
+.f-bottom a {
+    color: #fff;
+}
+
+.f-wrap {
+    padding: 0.8% 0;
+}
+
+.f-bottom-nav,
+.partner {
+    text-align: center;
+    margin: 0.5% auto;
+    line-height: 24px;
+}
+
+.f-bottom-nav a,
+.partner a {
+    padding: 0 0.3%;
+}
+
+.f-bottom-nav a:hover,
+.partner a:hover {
+    text-decoration: underline;
+}
+
+.f-bottom-nav span,
+.partner span {
+    font-size: 16px;
+}
+
+.f-img {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.f-img img {
+    width: 122px;
+    margin: 0 10px;
+}
+
+.f-number {
+    margin: 0.5% auto;
+    text-align: center;
+    line-height: 24px;
+}
+
+.f-number a:hover {
+    text-decoration: underline;
+}
+
+.f-number span {
+    padding: 0 6px;
+}
