@@ -15,12 +15,21 @@
     <!-- 头部，登录、注册 -->
     <div class="header">
         <div class="head">
-            <div class="head-l">
-                <span></span>
-                <a href="#">美逊首页</a>
+            <div class="head-l" id="notlog">
+                <span class="iconfont">&#xe653;</span>
+                <a href="index.html">美逊首页</a>
                 <a href="#">您好，欢迎来到美逊</a>
                 <a href="login.html" class="login">请登录</a>
                 <a href="register.html" class="register">免费注册</a>
+            </div>
+            <div class="head-l" id="logged" style="display: none;">
+                <span class="iconfont">&#xe653;</span>
+                <a href="index.html">美逊首页</a>
+                <a href="#">您好</a>
+                <a href="#" id="username">yonghuming</a>
+                <a href="#">[个人]</a>
+                <div class="grade">Vo</div>
+                <a href="#" class="exit">【退出】</a>
             </div>
             <div class="head-r">
                 <div class="h-item">
@@ -71,17 +80,20 @@
     <!-- 搜索 -->
     <div class="search">
         <div class="logo">
-            <a href="http://www.mayzone360.com" title="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门"><img alt="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门" src="http://www.mayzone360.com/shop/templates/default/images/index/top_logo.gif"></a>
+            <a href="index.html" title="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门"><img alt="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门" src="http://www.mayzone360.com/shop/templates/default/images/index/top_logo.gif"></a>
         </div>
         <div class="sea">
             <div class="inputbox">
                 <input type="text" placeholder="请输入您要搜索的关键字">
-                <a href="#">搜索</a>
+                <a href="#">搜 索</a>
             </div>
             <p><a href="#">复印纸</a><a href="#">硒鼓</a><a href="#">中性笔</a><a href="#">档案盒</a><a href="#">文件夹</a><a href="#">打印机</a><a href="#">电脑</a></p>
         </div>
         <div class="s-buy">
-            <div class="s-font">购物车结算</div>
+            <div class="s-font">
+                <span class="iconfont">&#xf0179;</span> 购物车结算
+                <div class="pulldown"></div>
+            </div>
             <div class="s-buy-massage">
                 <div class="s-line"></div>
                 <div class="s-buy-title">
@@ -96,7 +108,9 @@
             </div>
         </div>
         <div class="s-person">
-            <div class="s-font">我的商城</div>
+            <div class="s-font"><span class="iconfont">&#xe621;</span>我的商城
+                <div class="pulldown"></div>
+            </div>
             <div class="s-person-massage">
                 <div class="s-line"></div>
                 <div class="person-title">
@@ -145,11 +159,15 @@
     <!-- 菜单 -->
     <div class="menu">
         <div class="menu-title">
-            所有商品分类
+            <span class="iconfont">&#xe626;</span>所有商品分类
         </div>
         <ul class="menu-stair">
             <li class="menu-goods">
-                <h2><a href="#" class="good-type">电脑办公</a></h2>
+                <h2>
+                    <span class="menu-goods-img"></span>
+                    <a href="#" class="good-type">电脑办公</a>
+                    <div class="pullright"></div>
+                </h2>
                 <p class="good-list">
                     <a href="#">办公设备</a>
                     <a href="#">办公文具</a>
@@ -157,43 +175,78 @@
                     <a href="#">电脑整机</a>
                 </p>
                 <div class="menu-second">
-                    <a href="list.html">多功能一体机</a>
+                    <ul>
+                        <li class="menu-second-li">
+                            <h6><span class="menu-second-img1"></span><a href="#">办公设备</a></h6>
+                            <p><a href="#">打印机</a><a href="#">传真设备</a><a href="#">扫描设备</a><a href="#">复合机</a><a href="#">投影机</a><a href="#">投影配件</a><a href="#">点验钞机</a><a href="#">考勤机</a><a href="#">碎纸机</a><a href="#">保险柜</a><a href="#">装订/封装机</a><a href="#">电话机</a></p>
+                        </li>
+                        <li class="menu-second-li">
+                            <h6><span class="menu-second-img2"></span><a href="#">办公文具</a></h6>
+                            <p><a href="#">办公用纸</a><a href="list.html" style="font-weight: bold;color: red;">桌面文具（只有此处链接可点）</a><a href="#">文件管理</a><a href="#">本册/便签</a><a href="#">财务用品</a><a href="#">计算器</a><a href="#">笔类</a><a href="#">白板</a><a href="#">购物卡券</a></p>
+                        </li>
+                        <li class="menu-second-li">
+                            <h6><span class="menu-second-img3"></span><a href="#">办公耗材</a></h6>
+                            <p><a href="#">硒鼓</a><a href="#">墨粉</a><a href="#">墨盒</a><a href="#">色带</a><a href="#">墨水</a></p>
+                        </li>
+                        <li class="menu-second-li">
+                            <h6><span class="menu-second-img4"></span><a href="#">电脑整机</a></h6>
+                            <p><a href="#">笔记本</a><a href="#">超极本</a><a href="#">游戏本</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">笔记本配件</a></p>
+                        </li>
+                        <li class="menu-second-li">
+                            <h6><span class="menu-second-img5"></span><a href="#">外设产品</a></h6>
+                            <p><a href="#">鼠标</a><a href="#">键盘</a><a href="#">U盘</a><a href="#">移动硬盘</a><a href="#">存储设备</a><a href="#">电池</a><a href="#">耳机/耳麦</a><a href="#">音响</a><a href="#">线缆</a><a href="#">电脑清洁</a><a href="#">插座</a><a href="#">路由器</a>
+                                <a href="#">网卡</a><a href="#">交换机</a></p>
+                        </li>
+                    </ul>
+
                 </div>
             </li>
             <li class="menu-goods">
-                <h2><a href="#" class="good-type">电脑办公</a></h2>
+                <h2>
+                    <span class="menu-goods-img"></span>
+                    <a href="#" class="good-type">生活用品</a>
+                    <div class="pullright"></div>
+                </h2>
                 <p class="good-list">
-                    <a href="#">办公设备</a>
-                    <a href="#">办公文具</a>
-                    <a href="#">办公耗材</a>
-                    <a href="#">电脑整机</a>
+                    <a href="#">纸品湿巾</a>
+                    <a href="#">衣物清洁</a>
+                    <a href="#">家庭清洁</a>
+                    <a href="#">清洁用品</a>
                 </p>
                 <div class="menu-second">
-                    二级菜单列表2
+                    二级菜单2
                 </div>
             </li>
             <li class="menu-goods">
-                <h2><a href="#" class="good-type">电脑办公</a></h2>
+                <h2>
+                    <span class="menu-goods-img"></span>
+                    <a href="#" class="good-type">食品饮料</a>
+                    <div class="pullright"></div>
+                </h2>
                 <p class="good-list">
-                    <a href="#">办公设备</a>
-                    <a href="#">办公文具</a>
-                    <a href="#">办公耗材</a>
-                    <a href="#">电脑整机</a>
+                    <a href="#">休闲食品</a>
+                    <a href="#">饼干/糕点</a>
+                    <a href="#">方便速食</a>
+                    <a href="#">饮料/冲调</a>
                 </p>
                 <div class="menu-second">
-                    二级菜单列表3
+                    二级菜单3
                 </div>
             </li>
             <li class="menu-goods">
-                <h2><a href="#" class="good-type">电脑办公</a></h2>
+                <h2>
+                    <span class="menu-goods-img"></span>
+                    <a href="#" class="good-type">个人护理</a>
+                    <div class="pullright"></div>
+                </h2>
                 <p class="good-list">
-                    <a href="#">办公设备</a>
-                    <a href="#">办公文具</a>
-                    <a href="#">办公耗材</a>
-                    <a href="#">电脑整机</a>
+                    <a href="#">洗发护发</a>
+                    <a href="#">身体护肤</a>
+                    <a href="#">口腔护理</a>
+                    <a href="#">女性护理</a>
                 </p>
                 <div class="menu-second">
-                    二级菜单列表4
+                    二级菜单4
                 </div>
             </li>
         </ul>
@@ -240,6 +293,10 @@
 
         </div>
     </div>
+    <!-- 返回顶部 -->
+    <div class="totop" style="display: none;">
+
+    </div>
     <!-- 团购 -->
     <div class="group">
         <ul class="group-list">
@@ -254,7 +311,7 @@
                 </a>
                 <div class="group-sale">已售：546</div>
                 <div class="group-cart">
-                    车
+                    <span class="iconfont">&#xf0179;</span>
                 </div>
             </li>
             <li class="group-good">
@@ -263,7 +320,7 @@
                 </a>
                 <div class="group-sale">已售：546</div>
                 <div class="group-cart">
-                    车
+                    <span class="iconfont">&#xf0179;</span>
                 </div>
             </li>
             <li class="group-good">
@@ -272,7 +329,7 @@
                 </a>
                 <div class="group-sale">已售：546</div>
                 <div class="group-cart">
-                    车
+                    <span class="iconfont">&#xf0179;</span>
                 </div>
             </li>
             <li class="group-good">
@@ -281,7 +338,7 @@
                 </a>
                 <div class="group-sale">已售：546</div>
                 <div class="group-cart">
-                    车
+                    <span class="iconfont">&#xf0179;</span>
                 </div>
             </li>
         </ul>

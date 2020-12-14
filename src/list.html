@@ -8,18 +8,28 @@
     <meta name="keywords" content="办公文仪，会议用品，考勤设备，办公安全，美逊,办公用品,办公用品网,办公用品报价,办公用品采购,办公用品批发,办公用品配送,办公用品网站,济南办公用品,济南办公用品网,济南办公用品批发,济南办公用品配送">
     <meta name="description" content="办公文仪频道提供各个品牌办公文具、会议设备、办公安全等办公室用品的价格、促销、评论、图片等相关信息，购买最新办公文仪用品就到美逊，省钱又放心！,美逊是一家综合办公用品提供商，提供各类办公用品报价、办公用品批发、办公用品配送服务。采购办公用品就找山东办公用品、美逊办公用品网、美逊办公网络商城。">
     <link rel="stylesheet" href="style/list.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js" defer async=true data-main="script/main.js" id="currentpage" data-origin="list_module"></script>
 </head>
 
 <body>
     <!-- 头部，登录、注册 -->
     <div class="header">
         <div class="head">
-            <div class="head-l">
-                <span></span>
-                <a href="#">美逊首页</a>
+            <div class="head-l" id="notlog">
+                <span class="iconfont">&#xe653;</span>
+                <a href="index.html">美逊首页</a>
                 <a href="#">您好，欢迎来到美逊</a>
                 <a href="login.html" class="login">请登录</a>
                 <a href="register.html" class="register">免费注册</a>
+            </div>
+            <div class="head-l" id="logged" style="display: none;">
+                <span class="iconfont">&#xe653;</span>
+                <a href="index.html">美逊首页</a>
+                <a href="#">您好</a>
+                <a href="#" id="username">yonghuming</a>
+                <a href="#">[个人]</a>
+                <div class="grade">Vo</div>
+                <a href="#" class="exit">【退出】</a>
             </div>
             <div class="head-r">
                 <div class="h-item">
@@ -70,17 +80,20 @@
     <!-- 搜索 -->
     <div class="search">
         <div class="logo">
-            <a href="http://www.mayzone360.com" title="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门"><img alt="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门" src="http://www.mayzone360.com/shop/templates/default/images/index/top_logo.gif"></a>
+            <a href="index.html" title="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门"><img alt="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门" src="http://www.mayzone360.com/shop/templates/default/images/index/top_logo.gif"></a>
         </div>
         <div class="sea">
             <div class="inputbox">
                 <input type="text" placeholder="请输入您要搜索的关键字">
-                <a href="#">搜索</a>
+                <a href="#">搜 索</a>
             </div>
             <p><a href="#">复印纸</a><a href="#">硒鼓</a><a href="#">中性笔</a><a href="#">档案盒</a><a href="#">文件夹</a><a href="#">打印机</a><a href="#">电脑</a></p>
         </div>
         <div class="s-buy">
-            <div class="s-font">购物车结算</div>
+            <div class="s-font">
+                <span class="iconfont">&#xf0179;</span> 购物车结算
+                <div class="pulldown"></div>
+            </div>
             <div class="s-buy-massage">
                 <div class="s-line"></div>
                 <div class="s-buy-title">
@@ -95,7 +108,9 @@
             </div>
         </div>
         <div class="s-person">
-            <div class="s-font">我的商城</div>
+            <div class="s-font"><span class="iconfont">&#xe621;</span>我的商城
+                <div class="pulldown"></div>
+            </div>
             <div class="s-person-massage">
                 <div class="s-line"></div>
                 <div class="person-title">
@@ -123,7 +138,7 @@
                 </div>
             </div>
         </div>
-        <div style="clear: both;"></div>
+
     </div>
     <!-- 返回首页 -->
     <div class="toindex"><a href="index.html">首页</a></div>

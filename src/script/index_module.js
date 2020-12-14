@@ -94,6 +94,32 @@ define(['jlazyload'], () => {
                     });
                 });
             });
+            //返回顶部
+            $(window).on('scroll', function() {
+                if (document.documentElement.scrollTop >= 600) {
+                    $('.totop').show();
+                } else {
+                    $('.totop').hide();
+                }
+            })
+            $('.totop').on('click', function() {
+                window.scrollTo(0, 0);
+            });
+            //头部登录状态判断
+            if (localStorage.getItem('username')) {
+                $('#notlog').hide();
+                $('#logged').show();
+                $('#logged').find('#username').html(localStorage.getItem('username'));
+            } else {
+                $('#notlog').show();
+                $('#logged').hide();
+            }
+            //退出登录
+            $('.exit').on('click', function() {
+                $('#notlog').show();
+                $('#logged').hide();
+                localStorage.removeItem('username');
+            });
         }
     };
 })

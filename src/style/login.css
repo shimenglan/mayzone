@@ -180,6 +180,7 @@ a {
     font-size: 16px;
     border: none;
     color: #fff;
+    outline: none;
 }
 
 #mz_member_main .mz_member_mainRight .mz_login_content p.mz_login_contentMore {

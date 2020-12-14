@@ -97,6 +97,36 @@ body {
   font-size: 12px;
   margin-left: 4px;
 }
+.head-l span {
+  color: #e00000;
+}
+.head-l a:hover {
+  color: #e00000;
+  text-decoration: underline;
+}
+.head-l .grade {
+  float: left;
+  background-color: #e00000;
+  font-style: italic;
+  font-size: 12px;
+  color: #fff;
+  margin-top: 9px;
+  line-height: 12px;
+  padding-right: 2px;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("../fonts/iconfont.eot");
+  src: url("../fonts/iconfont.eot?#iefix") format("embedded-opentype"), url("../fonts/iconfont.woff2") format("woff2"), url("../fonts/iconfont.woff") format("woff"), url("../fonts/iconfont.ttf") format("truetype"), url("../fonts/iconfont.svg#iconfont") format("svg");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .head-r {
   float: right;
@@ -215,6 +245,16 @@ body {
   font-size: 12px;
   cursor: pointer;
 }
+.s-buy .pulldown, .s-person .pulldown {
+  display: inline-block;
+  border: 4px solid transparent;
+  font-size: 0;
+  border-top: 4px solid #777;
+  transition: 0.2s;
+}
+.s-buy:hover .pulldown, .s-person:hover .pulldown {
+  transform: rotate(180deg);
+}
 
 .s-buy-massage, .s-person-massage {
   display: none;
@@ -227,7 +267,7 @@ body {
 }
 
 .s-buy {
-  width: 106px;
+  width: 100px;
 }
 .s-buy:hover {
   background-color: #fff;
@@ -414,6 +454,10 @@ body {
   text-align: center;
   font-weight: bold;
 }
+.menu-title .iconfont {
+  color: #fff;
+  font-size: 20px;
+}
 
 .menu-stair {
   float: left;
@@ -427,16 +471,29 @@ body {
 
 .menu-goods {
   height: 100px;
-  padding: 6% 2% 0 2%;
+  padding: 8% 2% 0 2%;
   border-bottom: 1px #eaeaea solid;
 }
 .menu-goods h2 {
   padding-bottom: 3%;
+  margin-left: 12px;
   font-weight: normal;
   font-size: 18px;
 }
+.menu-goods h2 .menu-goods-img {
+  padding: 0 12px;
+  background: url("http://www.mayzone360.com/shop/templates/default/images/.pnav-icon.png") no-repeat 0px 0px;
+}
 .menu-goods h2 .good-type {
   color: #000;
+  padding-left: 10px;
+  padding-right: 30px;
+}
+.menu-goods h2 .pullright {
+  display: inline-block;
+  border: 4px solid transparent;
+  font-size: 0;
+  border-left: 4px solid #000;
 }
 .menu-goods .good-list {
   margin: 0 auto;
@@ -451,21 +508,98 @@ body {
 .menu-goods.active a {
   color: #C60A0A;
 }
+.menu-goods.active .menu-goods-img {
+  background: url("http://www.mayzone360.com/shop/templates/default/images/.pnav-icon.png") no-repeat -26px 0px;
+}
+.menu-goods.active .pullright {
+  border-left: 4px solid #C60A0A;
+}
 .menu-goods .menu-second {
   display: none;
+  padding-left: 30px;
   position: absolute;
   top: -2px;
-  left: 198px;
+  left: 196px;
   background-color: #fff;
-  width: 700px;
+  width: 650px;
   height: 100%;
   border-top: 2px solid #c60a0a;
   border-right: 2px solid #c60a0a;
   border-bottom: 2px solid #c60a0a;
 }
+.menu-goods .menu-second .menu-second-li {
+  width: 80%;
+}
+.menu-goods .menu-second h6 {
+  margin-top: 20px;
+  border-bottom: 1px dotted #ccc;
+  line-height: 26px;
+}
+.menu-goods .menu-second h6 .menu-second-img1 {
+  padding: 2px 10px;
+  background: url("http://www.mayzone360.com/data/upload/shop/common/category-pic-25.jpg") no-repeat center center;
+  background-size: 100% auto;
+}
+.menu-goods .menu-second h6 .menu-second-img2 {
+  padding: 2px 10px;
+  background: url("http://www.mayzone360.com/data/upload/shop/common/category-pic-103.jpg") no-repeat center center;
+  background-size: 100% auto;
+}
+.menu-goods .menu-second h6 .menu-second-img3 {
+  padding: 2px 10px;
+  background: url("http://www.mayzone360.com/data/upload/shop/common/category-pic-20.jpg") no-repeat center center;
+  background-size: 100% auto;
+}
+.menu-goods .menu-second h6 .menu-second-img4 {
+  padding: 2px 10px;
+  background: url("http://www.mayzone360.com/data/upload/shop/common/category-pic-411.jpg") no-repeat center center;
+  background-size: 100% auto;
+}
+.menu-goods .menu-second h6 .menu-second-img5 {
+  padding: 2px 10px;
+  background: url("http://www.mayzone360.com/data/upload/shop/common/category-pic-412.jpg") no-repeat center center;
+  background-size: 100% auto;
+}
+.menu-goods .menu-second h6 a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  padding-left: 4px;
+}
 .menu-goods .menu-second a {
-  color: #666;
-  font-size: 12px;
+  color: #999;
+  font-size: 13px;
+  padding: 0 12px 0 0;
+}
+.menu-goods .menu-second p {
+  padding: 0 30px;
+}
+.menu-goods .menu-second p a:hover {
+  color: #333;
+}
+
+.menu-stair :nth-child(2) .menu-goods-img {
+  background: url("http://www.mayzone360.com/shop/templates/default/images/.pnav-icon.png") no-repeat 0px -25px;
+}
+
+.menu-stair :nth-child(2):hover .menu-goods-img {
+  background: url("http://www.mayzone360.com/shop/templates/default/images/.pnav-icon.png") no-repeat -26px -25px;
+}
+
+.menu-stair :nth-child(3) .menu-goods-img {
+  background: url("http://www.mayzone360.com/shop/templates/default/images/.pnav-icon.png") no-repeat 0px -50px;
+}
+
+.menu-stair :nth-child(3):hover .menu-goods-img {
+  background: url("http://www.mayzone360.com/shop/templates/default/images/.pnav-icon.png") no-repeat -26px -50px;
+}
+
+.menu-stair :nth-child(4) .menu-goods-img {
+  background: url("http://www.mayzone360.com/shop/templates/default/images/.pnav-icon.png") no-repeat 0px -75px;
+}
+
+.menu-stair :nth-child(4):hover .menu-goods-img {
+  background: url("http://www.mayzone360.com/shop/templates/default/images/.pnav-icon.png") no-repeat -26px -75px;
 }
 
 .slideshow {
@@ -530,6 +664,19 @@ li.slide-picbox1 {
   background: url("http://www.mayzone360.com/shop/templates/default/images/timer.png") no-repeat top right;
 }
 
+.totop {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 3%;
+  right: 3%;
+  background: url("http://www.mayzone360.com/shop/templates/default/images/index/return.png") no-repeat 0 0;
+}
+.totop:hover {
+  background: url("http://www.mayzone360.com/shop/templates/default/images/index/return02.png") no-repeat 0 0;
+  cursor: pointer;
+}
+
 .group {
   background-color: #F5F5F5;
   padding: 32px 0;
@@ -563,12 +710,18 @@ li.slide-picbox1 {
   width: 24px;
   bottom: 18px;
   right: 8px;
-  font-size: 12px;
   margin-right: 10px;
   transition: 1s;
+  text-align: right;
 }
 .group-cart:hover {
   margin-right: 0px;
+  width: 34px;
+  cursor: pointer;
+}
+.group-cart .iconfont {
+  font-size: 24px;
+  color: red;
 }
 
 .banner {

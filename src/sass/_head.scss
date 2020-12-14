@@ -1,3 +1,4 @@
+@charset "utf-8";
 $headh:30px;
 .header {
     height: $headh;
@@ -21,6 +22,38 @@ $headh:30px;
         font-size: $font;
         margin-left: 4px;
     }
+    span {
+        color: #e00000;
+    }
+    a:hover {
+        color: #e00000;
+        text-decoration: underline;
+    }
+    .grade {
+        float: left;
+        background-color: #e00000;
+        font-style: italic;
+        font-size: $font;
+        color: #fff;
+        margin-top: 9px;
+        line-height: 12px;
+        padding-right: 2px;
+    }
+}
+
+//矢量图标
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), url('../fonts/iconfont.woff2') format('woff2'), url('../fonts/iconfont.woff') format('woff'), url('../fonts/iconfont.ttf') format('truetype'), url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 //右边导航

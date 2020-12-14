@@ -8,18 +8,28 @@
     <meta name="keywords" content="得力（deli）0012 12#订书钉 标准通用型 1000枚/盒 10盒装　通用版　--美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门">
     <meta name="description" content="得力（deli）0012 12#订书钉 标准通用型 1000枚/盒 10盒装　通用版　美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门">
     <link rel="stylesheet" href="style/detail.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js" defer async=true data-main="script/main.js" id="currentpage" data-origin="detail_module"></script>
 </head>
 
 <body>
     <!-- 头部，登录、注册 -->
     <div class="header">
         <div class="head">
-            <div class="head-l">
-                <span></span>
-                <a href="#">美逊首页</a>
+            <div class="head-l" id="notlog">
+                <span class="iconfont">&#xe653;</span>
+                <a href="index.html">美逊首页</a>
                 <a href="#">您好，欢迎来到美逊</a>
                 <a href="login.html" class="login">请登录</a>
                 <a href="register.html" class="register">免费注册</a>
+            </div>
+            <div class="head-l" id="logged" style="display: none;">
+                <span class="iconfont">&#xe653;</span>
+                <a href="index.html">美逊首页</a>
+                <a href="#">您好</a>
+                <a href="#" id="username">yonghuming</a>
+                <a href="#">[个人]</a>
+                <div class="grade">Vo</div>
+                <a href="#" class="exit">【退出】</a>
             </div>
             <div class="head-r">
                 <div class="h-item">
@@ -70,17 +80,20 @@
     <!-- 搜索 -->
     <div class="search">
         <div class="logo">
-            <a href="http://www.mayzone360.com" title="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门"><img alt="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门" src="http://www.mayzone360.com/shop/templates/default/images/index/top_logo.gif"></a>
+            <a href="index.html" title="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门"><img alt="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门" src="http://www.mayzone360.com/shop/templates/default/images/index/top_logo.gif"></a>
         </div>
         <div class="sea">
             <div class="inputbox">
                 <input type="text" placeholder="请输入您要搜索的关键字">
-                <a href="#">搜索</a>
+                <a href="#">搜 索</a>
             </div>
             <p><a href="#">复印纸</a><a href="#">硒鼓</a><a href="#">中性笔</a><a href="#">档案盒</a><a href="#">文件夹</a><a href="#">打印机</a><a href="#">电脑</a></p>
         </div>
         <div class="s-buy">
-            <div class="s-font">购物车结算</div>
+            <div class="s-font">
+                <span class="iconfont">&#xf0179;</span> 购物车结算
+                <div class="pulldown"></div>
+            </div>
             <div class="s-buy-massage">
                 <div class="s-line"></div>
                 <div class="s-buy-title">
@@ -95,7 +108,9 @@
             </div>
         </div>
         <div class="s-person">
-            <div class="s-font">我的商城</div>
+            <div class="s-font"><span class="iconfont">&#xe621;</span>我的商城
+                <div class="pulldown"></div>
+            </div>
             <div class="s-person-massage">
                 <div class="s-line"></div>
                 <div class="person-title">
@@ -242,10 +257,7 @@
                     <dt>购买数量：</dt>
                     <dd class="ncs-figure-input">
                         <input type="text" name="" id="quantity" value="1" size="3" maxlength="6" class="text w30">
-                        <a class="increase">+</a><a class="decrease">-</a> <em>
-                (当前库存            <strong nctype="goods_stock">
-                            995                        </strong>件)</em>
-
+                        <a class="increase">+</a><a class="decrease">-</a> <em>(当前库存<strong nctype="goods_stock">995</strong>件)</em>
                     </dd>
                 </dl>
                 <!-- 购买按钮 -->
@@ -266,12 +278,11 @@
                     <!-- 加入购物车弹出提示框 -->
                     <div class="ncs-cart-popup">
                         <dl>
-                            <dt>成功添加到购物车<a title="关闭" onclick="$('.ncs-cart-popup').css({'display':'none'});">X</a></dt>
+                            <dt>成功添加到购物车<a title="关闭">X</a></dt>
                             <dd>购物车共有 <strong id="bold_num"></strong> 种商品 总金额为：<em id="bold_mly" class="saleP"></em></dd>
                             <dd class="btns"><a class="ncs-btn-mini ncs-btn-green">查看购物车</a> <a class="ncs-btn-mini" value="">继续购物</a></dd>
                         </dl>
                     </div>
-                    <!-- E 加入购物车弹出提示框 -->
 
                 </div>
                 <div class="height20"></div>
@@ -279,7 +290,6 @@
                     <dt>免单额度： </dt>
                     <dd><em><i class="icon-gift"></i>  </em>满99免运费 </dd>
                 </dl>
-                <!-- E 购买按钮 -->
 
                 <dl>
                     <dt style="line-height:30px;">我要分享：</dt>

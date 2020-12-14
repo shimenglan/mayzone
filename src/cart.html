@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门</title>
+    <meta name="keywords" content="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门">
+    <meta name="description" content="美逊商城mayzone360.com-济南办公用品配送|网上商城|免费送货上门">
+    <link rel="stylesheet" href="style/cart.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js" defer async=true data-main="script/main.js" id="currentpage" data-origin="cart_module"></script>
+</head>
+
+<body>
+    <!-- 头部，登录、注册 -->
+    <div class="header">
+        <div class="head">
+            <div class="head-l" id="notlog">
+                <span class="iconfont">&#xe653;</span>
+                <a href="index.html">美逊首页</a>
+                <a href="#">您好，欢迎来到美逊</a>
+                <a href="login.html" class="login">请登录</a>
+                <a href="register.html" class="register">免费注册</a>
+            </div>
+            <div class="head-l" id="logged" style="display: none;">
+                <span class="iconfont">&#xe653;</span>
+                <a href="index.html">美逊首页</a>
+                <a href="#">您好</a>
+                <a href="#" id="username">yonghuming</a>
+                <a href="#">[个人]</a>
+                <div class="grade">Vo</div>
+                <a href="#" class="exit">【退出】</a>
+            </div>
+            <div class="head-r">
+                <div class="h-item">
+                    <div><a href="#">站点导航</a></div>
+                    <ul>
+                        <li><a href="#">品牌</a></li>
+                    </ul>
+                </div>
+                <div class="h-item">
+                    <div><a href="#">客户服务</a></div>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">售后服务</a></li>
+                        <li><a href="#">客服中心</a></li>
+                    </ul>
+                </div>
+                <div class="h-item">
+                    <div><a href="#">我是卖家</a></div>
+                    <ul>
+                        <li><a href="#">卖家中心</a></li>
+                        <li><a href="#">实物交易</a></li>
+                        <li><a href="#">商品发布</a></li>
+                        <li><a href="#">店铺设置</a></li>
+                    </ul>
+                </div>
+                <div class="h-item">
+                    <div><a href="#">我的收藏</a></div>
+                    <ul>
+                        <li><a href="#">商品收藏</a></li>
+                        <li><a href="#">店铺收藏</a></li>
+                    </ul>
+                </div>
+                <div class="h-item">
+                    <div><a href="#">我是买家</a></div>
+                    <ul>
+                        <li><a href="#">我的订单</a></li>
+                        <li><a href="#">待付款订单</a></li>
+                        <li><a href="#">待确认收货</a></li>
+                        <li><a href="#">待评价交易</a></li>
+                    </ul>
+                </div>
+                <div class="h-buy">
+                    <a href="cart.html">购物车</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 购物车头部 -->
+    <header class="ncc-head-layout">
+        <div class="site-logo">
+            <a href="index.html"><img src="http://www.mayzone360.com/data/upload/shop/common/logo.jpg" class="pngFix"></a>
+        </div>
+        <ul class="ncc-flow">
+            <li class="current"><i class="step1"></i>
+                <p>我的购物车</p>
+                <sub></sub>
+                <div class="hr"></div>
+            </li>
+            <li class=""><i class="step2"></i>
+                <p>填写核对购物信息</p>
+                <sub></sub>
+                <div class="hr"></div>
+            </li>
+            <li class=""><i class="step3"></i>
+                <p>支付提交</p>
+                <sub></sub>
+                <div class="hr"></div>
+            </li>
+            <li class=""><i class="step4"></i>
+                <p>订单完成</p>
+                <sub></sub>
+                <div class="hr"></div>
+            </li>
+        </ul>
+    </header>
+    <!-- 购物车标题 -->
+    <div class="ncc-title">
+        <h3>我的购物车</h3>
+        <h5>查看购物车商品清单，增加减少商品数量，并勾选想要的商品进入下一步操作。</h5>
+    </div>
+    <!-- 购物车主体 -->
+    <div class="ncc-wrap">
+        <table class="ncc-table-style" nc_type="table_cart">
+            <thead>
+                <tr>
+                    <th class="w50"><label>
+                    <input type="checkbox" checked="" value="1" id="selectAll">
+                    全选</label></th>
+                    <th></th>
+                    <th>商品</th>
+                    <th class="w120">单价(元)</th>
+                    <th class="w120">数量</th>
+                    <th class="w120">小计(元)</th>
+                    <th class="w80">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 店铺 -->
+                <tr>
+                    <th colspan="20"><strong style="float: left;">店铺：<a href="http://www.mayzone360.com/shop/shop-2.html">优优阳光</a></strong>
+                        <div class="store-sale"><em><i class="icon-gift"></i>店铺活动-满99免运费</em></div>
+                    </th>
+                </tr>
+
+                <!-- 商品 -->
+                <tr id="cart_item_108790" nc_group="108790" class="shop-list ">
+                    <!-- 复选框 -->
+                    <td>
+                        <input type="checkbox" checked="" nc_type="eachGoodsCheckBox" value="108790|1" id="cart_id108790" name="cart_id[]">
+                    </td>
+                    <!-- 商品图片 -->
+                    <td class="w60">
+                        <a href="http://www.mayzone360.com/shop/item-7745.html" target="_blank" class="ncc-goods-thumb"><img src="http://www.mayzone360.com/data/upload/shop/store/goods/2/2016/03/2_05112637266741242_60.jpg" alt="得力（deli）0012 12#订书钉 标准通用型 1000枚/盒 10盒装　通用版　"></a>
+                    </td>
+                    <!-- 商品标题 -->
+                    <td class="tl">
+                        <dl class="ncc-goods-info">
+                            <dt><a href="http://www.mayzone360.com/shop/item-7745.html" target="_blank">得力（deli）0012 12#订书钉 标准通用型 1000枚/盒 10盒装　通用版　</a></dt>
+                        </dl>
+                    </td>
+                    <!-- 单价 -->
+                    <td class="w120"><em id="item108790_price">11.80</em></td>
+                    <!-- 数量 -->
+                    <td class="w120 ws0">
+                        <!-- 减 -->
+                        <a href="JavaScript:;" title="减少商品件数" class="add-substract-key tip">-</a>
+                        <!-- 现有数量 -->
+                        <input id="input_item_108790" value="1" orig="1" changed="1" type="text" class="text w20">
+                        <!-- 加 -->
+                        <a href="JavaScript:;" title="增加商品件数" class="add-substract-key tip">+</a>
+                    </td>
+                    <!-- 小计价格 -->
+                    <td class="w120">
+                        <em id="item108790_subtotal" nc_type="eachGoodsTotal">11.80</em>
+                    </td>
+                    <!-- 收藏、删除 -->
+                    <td class="w80">
+                        <a href="javascript:">收藏</a><br>
+                        <a href="javascript:">删除</a>
+                    </td>
+                </tr>
+                <!-- 店铺商品总价格 -->
+                <tr>
+                    <td class="tr" colspan="20">
+                        <div class="ncc-store-account">
+                            <dl style="text-align: right;">
+                                <dt>店铺合计：</dt>
+                                <dd><em nc_type="eachStoreTotal">11.80</em>元</dd>
+                            </dl>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            <!-- 商品总价 -->
+            <tfoot>
+                <tr>
+                    <td colspan="20">
+                        <div class="ncc-all-account">商品总价（不含运费）<em id="cartTotal">11.80</em>元</div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- 下一步 -->
+    <div class="ncc-bottom">
+        <a id="next_submit" style="cursor:pointer" class="ncc-btn ncc-btn-acidblue fr">
+            <i class="icon-pencil"></i> 下一步，填写核对购物信息
+        </a>
+    </div>
+    <!-- 尾部 -->
+    <div class="footer">
+        <div class="footer-img">
+            <div class="foot-img">
+                <a href="#"><img src="http://www.mayzone360.com/shop/templates/default/images/index/mz-footer.png" alt=""></a>
+            </div>
+        </div>
+
+        <!-- 尾部导航 -->
+        <div class="f-nav">
+            <ul class="f-ul">
+                <li class="f-li">
+                    <p class="f-tit">帮助中心</p>
+
+                    <p class="f-lists"><a href="#">购物流程</a></p>
+                    <p class="f-lists"><a href="#">查看已买商品</a></p>
+                    <p class="f-lists"><a href="#">交易须知</a></p>
+                </li>
+                <li class="f-li">
+                    <p class="f-tit">支付方式</p>
+                    <p class="f-lists"><a href="#">在线支付</a></p>
+                    <p class="f-lists"><a href="#">发票保障</a></p>
+                </li>
+                <li class="f-li">
+                    <p class="f-tit">售后服务</p>
+                    <p class="f-lists"><a href="#">联系卖家</a></p>
+                    <p class="f-lists"><a href="#">退款申请</a></p>
+                    <p class="f-lists"><a href="#">退换货政策</a></p>
+                </li>
+                <li class="f-li">
+                    <p class="f-tit">商家服务</p>
+                    <p class="f-lists"><a href="#">商家中心</a></p>
+                    <p class="f-lists"><a href="#">商家入驻</a></p>
+                </li>
+                <li class="f-li">
+                    <p class="f-tit">客服中心</p>
+                    <p class="f-lists"><a href="#">联系我们</a></p>
+                    <p class="f-lists"><a href="#">关于我们</a></p>
+                </li>
+            </ul>
+
+        </div>
+        <!-- 尾部底黑色区域 -->
+        <div class="f-bottom">
+            <div class="f-wrap">
+                <p class="f-bottom-nav">
+                    <a href="#">首页</a>
+                    <span>|</span>
+                    <a href="#">合作及洽谈</a>
+                    <span>|</span>
+                    <a href="#">联系我们</a>
+                    <span>|</span>
+                    <a href="#">关于我们</a>
+                    <span>|</span>
+                    <a href="#">回到顶部</a>
+                </p>
+                <p class="partner">
+                    合作伙伴：
+                    <a href="#">美逊商城</a>
+                    <a href="#">优优阳光旗舰店</a>
+                    <a href="#">美逊微博</a>
+                    <a href="#">济南办公用品配送</a>
+                </p>
+                <div class="f-img">
+                    <img src="http://www.mayzone360.com/shop/templates/default/images/index/mz_FootImgInfo4.png" alt="">
+                    <img src="http://www.mayzone360.com/shop/templates/default/images/index/mz_FootImgInfo5.png" alt="">
+                </div>
+                <p class="f-number">编号： <a href="#">鲁ICP备13025849号-1</a> <span>美逊版权所有</span><span>邮箱：mayzone360@163.com</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
