@@ -28,7 +28,7 @@ define([], () => {
                         $('#red6').hide();
                         $.ajax({
                             type: 'post',
-                            url: 'http://localhost/dashboard/mayzone/php/register.php',
+                            url: 'http://10.31.161.89/dashboard/mayzone/php/register.php',
                             data: {
                                 name: userval
                             }
@@ -163,13 +163,13 @@ define([], () => {
                 if (userflag && pwflag1 && pwflag2 && yzmflag) {
                     $.ajax({
                         type: 'post',
-                        url: 'http://localhost/dashboard/mayzone/php/register.php',
+                        url: 'http://10.31.161.89/dashboard/mayzone/php/register.php',
                         data: {
                             username: $('#user_name').val(),
                             password: $('#password').val(),
                         }
                     }).done(() => {
-                        location.href = 'http://localhost/dashboard/mayzone/src/login.html';
+                        location.href = 'http://10.31.161.89/dashboard/mayzone/src/login.html';
                     })
                 }
             })

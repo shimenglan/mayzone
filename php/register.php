@@ -18,5 +18,5 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
     $pass = sha1($_POST['password']);
     $conn->query("insert register values(null,'$user','$pass')");//将数据传递给数据库。
     //一旦数据提交成功，回到前端的登录页面
-    // header('location:http://localhost/dashboard/mayzone/src/login.html');
+    // header('location:http://10.31.161.89/dashboard/mayzone/src/login.html');
 }

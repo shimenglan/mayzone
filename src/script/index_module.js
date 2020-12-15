@@ -73,7 +73,7 @@ define(['jlazyload'], () => {
             });
             //产品数据渲染
             $.ajax({
-                url: 'http://localhost/dashboard/mayzone/php/indexdata.php',
+                url: 'http://10.31.161.89/dashboard/mayzone/php/indexdata.php',
                 dataType: 'json'
             }).done(function(data) {
                 let $strhtml = '';

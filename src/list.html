@@ -242,19 +242,12 @@
     <div class="sticky">
         <div class="shop_con_list">
             <nav class="sort-bar">
-                <div class="pagination">
-                    <ul>
-                        <li><span>上一页</span></li>
-                        <li><a class="demo" href="#"><span>下一页</span></a></li>
-                    </ul>
-                </div>
 
                 <div class="nch-sortbar-array mz_fl"> 排序方式：
                     <ul>
-                        <li class="selected"><a href="#" title="默认排序">默认</a></li>
-                        <li><a href="#" title="点击按销量从高到低排序">销量<i></i></a></li>
-                        <li><a href="#" title="点击按人气从高到低排序">人气<i></i></a></li>
-                        <li><a href="#" title="点击按价格从高到低排序">价格<i></i></a></li>
+                        <li class="selected"><a href="javascript:;" title="默认排序" class="default_sort">默认</a></li>
+                        <li><a href="javascript:;" title="点击按价格从低到高排序" class="ascending">价格升序</a></li>
+                        <li><a href="javascript:;" title="点击按价格从高到低排序" class="descending">价格降序</a></li>
                     </ul>
                 </div>
 
@@ -271,27 +264,64 @@
             </nav>
             <!-- 商品列表循环  -->
             <div class="height10"></div>
-            <ul class="goods-lists" style="height: 1000px;background-color: royalblue;">
-                <li class="goods-content">
+            <ul class="goods-lists">
+                <!-- <li class="goods-content">
+                    <div class="goods_info">
+                        <div class="goods_info_img">
+                            <a href="detail.html" target="_blank"><img src="http://www.mayzone360.com/data/upload/shop/store/goods/2/2015/10/2_04988462148162734_240.jpg"></a>
+                        </div>
+                        <p class="goods_info_price">
+                            ¥11.80
+                        </p>
+                        <p class="goods_info_title"><a href="detail.html" target="_blank">得力（deli）0012 12#订书钉 标准通用型 1000枚/盒 10盒装　通用版</a></p>
+                        <p class="goods_info_store">所属店铺：<a href="#">优优阳光</a></p>
+                        <table class="goodslist_tab">
+                            <tbody>
+                                <tr>
+                                    <td width="35%">销量：1788</td>
+                                    <td width="45%">评论：23%</td>
+                                    <td>
+                                        <a href="#" title="QQ: 1365895506"><img border="0" src="http://www.mayzone360.com/shop/templates/default/images/qq.jpg" style=" vertical-align: middle; "></a>
+                                    </td>
+                                </tr>
 
-                </li>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="goods_imgs">
+                        <ul>
+                            <li class="goods_imgs-li active">
+                                <a href="javascript:;">
+                                    <img src="http://www.mayzone360.com/data/upload/shop/store/goods/2/2016/03/2_05112637266741242_60.jpg" width="30" height="30"></a>
+                            </li>
+                            <li class="goods_imgs-li">
+                                <a href="javascript:;">
+                                    <img src="http://www.mayzone360.com/data/upload/shop/store/goods/2/2016/03/2_05112637266741242_60.jpg" width="30" height="30"></a>
+                            </li>
+                            <li class="goods_imgs-li">
+                                <a href="javascript:;">
+                                    <img src="http://www.mayzone360.com/data/upload/shop/store/goods/2/2016/03/2_05112637266741242_60.jpg" width="30" height="30"></a>
+                            </li>
+                            <li class="goods_imgs-li">
+                                <a href="javascript:;">
+                                    <img src="http://www.mayzone360.com/data/upload/shop/store/goods/2/2016/03/2_05112637266741242_60.jpg" width="30" height="30"></a>
+                            </li>
+                            <li class="goods_imgs-li">
+                                <a href="javascript:;">
+                                    <img src="http://www.mayzone360.com/data/upload/shop/store/goods/2/2016/03/2_05112637266741242_60.jpg" width="30" height="30"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li> -->
             </ul>
-            <div class="pagination">
-                <ul class="bottom-page">
-                    <li><span>首页</span></li>
-                    <li><span>上一页</span></li>
-                    <li><span class="currentpage">1</span></li>
-                    <li><a class="demo" href="#"><span>2</span></a></li>
-                    <li><a class="demo" href="#"><span>3</span></a></li>
-                    <li><a class="demo" href="#"><span>4</span></a></li>
-                    <li><a class="demo" href="#"><span>5</span></a></li>
-                    <li><a class="demo" href="#"><span>6</span></a></li>
-                    <li><a class="demo" href="#"><span>下一页</span></a></li>
-                    <li><a class="demo" href="#"><span>末页</span></a></li>
-                </ul>
+
+            <!-- 分页的结构 -->
+            <div class="pagelist">
+                <div class="m-style page">
+                </div>
             </div>
-            <div nctype="booth_goods" style="border:solid 1px #D7D7D7;
-            margin-bottom: 10px;"></div>
+            <div nctype="booth_goods" style="border-bottom:solid 2px #D7D7D7;
+            margin: 50px 0 10px 0; clear: both;"></div>
         </div>
     </div>
     <!-- 尾部 -->

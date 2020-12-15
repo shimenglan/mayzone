@@ -803,6 +803,7 @@ body {
 .shop_con_list {
     width: 1230px;
     margin: 0 auto;
+    position: relative;
 }
 
 .sort-bar {
@@ -810,143 +811,9 @@ body {
     display: block;
     height: 36px;
     border: solid 1px #D7D7D7;
-}
-
-
-/* 翻页样式 */
-
-.pagination {
-    /* display: inline-block; */
-    overflow: hidden;
-}
-
-.pagination ul {
-    font-size: 0;
-    *word-spacing: -1px/*IE6、7*/
-    ;
-}
-
-.bottom-page {
-    padding: 20px 0;
-    width: 430px;
-    margin: 0 auto;
-}
-
-.pagination ul li {
-    vertical-align: top;
-    letter-spacing: normal;
-    word-spacing: normal;
-    display: inline-block;
-    margin: 0 0 0 -1px;
-}
-
-.pagination ul li {
-    *display: inline/*IE6、7*/
-    ;
-    *zoom: 1;
-}
-
-.pagination li span {
-    font: normal 14px/20px "microsoft yahei";
-    color: #AAA;
-    background-color: #FAFAFA;
-    text-align: center;
-    display: block;
-    min-width: 20px;
-    padding: 8px;
-    border: 1px solid #E6E6E6;
-    position: relative;
-    z-index: 1;
-}
-
-.pagination li a span,
-.pagination li a:visited span {
-    color: #005AA0;
-    text-decoration: none;
-    background-color: #FFF;
-    position: relative;
-    z-index: 1;
-}
-
-.pagination li a:hover span,
-.pagination li a:active span {
-    color: #FFF;
-    text-decoration: none !important;
-    background-color: #D93600;
-    border-color: #CA3300;
-    position: relative;
-    z-index: 9;
-    cursor: pointer;
-}
-
-.pagination li a:hover {
-    text-decoration: none;
-}
-
-.pagination li span.currentpage {
-    color: #AAA;
-    font-weight: bold;
-    background-color: #FAFAFA;
-    border-color: #E6E6E6;
-    position: relative;
-    z-index: 2;
-}
-
-.sort-bar .pagination {
-    /* display: inline-block; */
-    float: right;
-    margin: 7px 5px 0 0
-}
-
-.sort-bar .pagination ul {
-    font-size: 0;
-    *word-spacing: -1px/*IE6、7*/
-    ;
-}
-
-.sort-bar .pagination ul li {
-    vertical-align: top;
-    letter-spacing: normal;
-    word-spacing: normal;
-    display: inline-block;
-    margin: 0 2px;
-}
-
-.sort-bar .pagination ul li {
-    *display: inline/*IE6、7*/
-    ;
-    *zoom: 1;
-}
-
-.sort-bar .pagination li span {
-    font: normal 12px/16px "microsoft yahei";
-    color: #AAA;
-    background-color: #FAFAFA;
-    text-align: center;
-    display: block;
-    min-width: 16px;
-    padding: 2px 6px;
-    border: 1px solid #E6E6E6;
-    position: relative;
-    z-index: 1;
-}
-
-.sort-bar .pagination li a span {
-    color: #005AA0;
-    text-decoration: none;
-    background-color: #FFF;
-    position: relative;
-    z-index: 1;
-}
-
-.sort-bar .pagination li a:hover span {
-    color: #FFF;
-    text-decoration: none;
-    background-color: #D93600;
-    border-color: #CA3300;
-    position: relative;
-    z-index: 9;
-    cursor: pointer;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 
@@ -957,20 +824,13 @@ body {
     color: #777;
     vertical-align: top;
     display: inline-block;
-    *display: inline/*IE6,7*/
-    ;
     padding: 0 10px 0 10px;
-    *zoom: 1;
 }
 
 .nch-sortbar-array ul {
     font-size: 0;
-    *word-spacing: -1px/*IE6、7*/
-    ;
     vertical-align: middle;
     display: inline-block;
-    *display: inline/*IE6,7*/
-    ;
     border-right: solid 1px #E6E6E6;
     *zoom: 1;
 }
@@ -981,11 +841,7 @@ body {
     letter-spacing: normal;
     word-spacing: normal;
     display: inline-block;
-    *display: inline/*IE6,7*/
-    ;
     border-left: solid 1px #E6E6E6;
-    *zoom: 1;
-    _width: 60px;
     text-align: center;
 }
 
@@ -1082,6 +938,221 @@ button {
     border: none;
     border-left: 1px solid #ccc;
     color: #555;
+}
+
+
+/* 翻页样式 */
+
+.pagelist {
+    clear: both;
+    width: 1170px;
+    margin: 0 auto;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.m-style {
+    float: right;
+    text-align: center;
+}
+
+.m-style:before,
+.m-style:after {
+    content: "";
+    display: table;
+}
+
+.m-style:after {
+    clear: both;
+    overflow: hidden;
+}
+
+.m-style span {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+.m-style .active {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: #e91e63;
+    color: #fff;
+    font-size: 14px;
+    border: 1px solid #e91e63;
+}
+
+.m-style a {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+.m-style a:hover {
+    color: #fff;
+    background: #e91e63;
+}
+
+.m-style .next,
+.m-style .prev {
+    font-family: "Simsun";
+    font-size: 16px;
+    font-weight: bold;
+    width: 80px;
+}
+
+.now,
+.count {
+    padding: 0 5px;
+    color: #f00;
+}
+
+.eg img {
+    max-width: 800px;
+    min-height: 500px;
+}
+
+.pagelist input {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    outline: none;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+
+/* 商品列表样式 */
+
+.goods-lists {
+    overflow: hidden;
+}
+
+.goods-content {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    width: 230px;
+    border: 1px solid #666;
+    margin-bottom: 12px;
+    margin-right: 17px;
+}
+
+.goods-lists>:nth-child(5n) {
+    margin-right: 0;
+}
+
+.goods_info {
+    padding-top: 10px;
+}
+
+.goods_info_img {
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: 1s;
+}
+
+.goods_info_img img {
+    width: 200px;
+    height: 200px;
+}
+
+.goods_info_price {
+    margin-top: 10px;
+    color: red;
+    font-size: 18px;
+    padding: 2px 10px;
+}
+
+.goods_info_title {
+    margin: 8px 0;
+    overflow: hidden;
+    padding: 0px 10px;
+    height: 44px;
+    line-height: 22px;
+}
+
+.goods_info_title a {
+    color: #000;
+    font-size: 12px;
+}
+
+.goods_info_store {
+    font-size: 14px;
+    color: #b9b9b9;
+    padding: 0 10px;
+}
+
+.goods_info_store a {
+    font-size: 14px;
+    color: #b9b9b9;
+}
+
+.goodslist_tab {
+    margin-top: 10px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+.goodslist_tab td {
+    border: 1px solid #666;
+    text-align: center;
+}
+
+.goods_imgs {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    left: -38px;
+    transition: 1s;
+    height: 200px;
+    overflow: hidden;
+}
+
+.goods_imgs-li {
+    width: 30px;
+    height: 30px;
+}
+
+.goods_imgs-li img {
+    width: 100%;
+}
+
+.goods-content:hover .goods_info_img {
+    margin-left: 50px;
+}
+
+.goods-content:hover .goods_imgs {
+    left: 5px;
+}
+
+.goods_imgs-li {
+    margin-top: 6px;
+    border: 2px solid #ddd;
+}
+
+.goods_imgs-li.active {
+    border: 2px solid red;
 }
 
 
