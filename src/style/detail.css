@@ -602,9 +602,11 @@ body {
     float: left;
     overflow: hidden;
     width: 375px;
+    position: relative;
 }
 
 .preview .smallImg #imageMenu ul {
+    position: absolute;
     margin: 0px;
     padding: 0px;
     height: 60px;

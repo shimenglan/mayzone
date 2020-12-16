@@ -20,6 +20,9 @@ define(['jcookie'], function() {
             //数据渲染
             //获取sid
             let sid = location.search.substring(1).split('=')[1];
+            if (!sid) {
+                sid = 1;
+            }
             $.ajax({
                 url: 'http://10.31.161.89/dashboard/mayzone/php/detail.php',
                 data: {
@@ -89,6 +92,45 @@ define(['jcookie'], function() {
                 }
                 $('#quantity').val(quantitynum);
             });
+            //小图点击切换大图
+            $('#imageMenu').on('click', 'img', function() {
+                $(this.parentNode).attr('id', 'onlickImg').siblings().attr('id', '');
+                $('#midimg').attr('src', $(this).attr('src'));
+                $('#bigView img').attr('src', $(this).attr('src'));
+            });
+            //小图翻页效果
+            $('.smallImgUp').css('background', '#ccc');
+            let currentNum = 0;
+            let $w = null;
+            $('.smallImgDown').on('click', function() {
+                let smallImgNum = $('.imageMenuLists li').size();
+                $w = $('.imageMenuLists li').outerWidth(true);
+                currentNum++;
+                $('.smallImgUp').css('background', 'url(http://www.mayzone360.com/shop/templates/default/images/shop/d_08.png)');
+                if (currentNum >= smallImgNum - 5) {
+                    currentNum = smallImgNum - 5;
+                    $('.smallImgDown').css('background', '#ccc');
+                } else {
+                    $('.smallImgDown').css('background', 'url(http://www.mayzone360.com/shop/templates/default/images/shop/d_09.png)');
+                }
+                $('.imageMenuLists').stop(true).animate({
+                    left: -currentNum * $w
+                });
+            });
+            $('.smallImgUp').on('click', function() {
+                currentNum--;
+                $('.smallImgDown').css('background', 'url(http://www.mayzone360.com/shop/templates/default/images/shop/d_09.png)');
+                if (currentNum <= 0) {
+                    currentNum = 0;
+                    $('.smallImgUp').css('background', '#ccc');
+                } else {
+                    $('.smallImgUp').css('background', 'url(http://www.mayzone360.com/shop/templates/default/images/shop/d_08.png)');
+                }
+                $('.imageMenuLists').stop(true).animate({
+                    left: -currentNum * $w
+                });
+            });
+
             //加入购物车
             let arrsid = [];
             let arrnum = [];
@@ -102,6 +144,7 @@ define(['jcookie'], function() {
             $('.addcart').on('click', function() {
                 quantitynum = parseInt($('#quantity').val());
                 strToArr();
+                console.log(arrsid.includes(sid))
                 if (!arrsid.includes(sid)) { //不存在
                     arrsid.push(sid);
                     arrnum.push(quantitynum);

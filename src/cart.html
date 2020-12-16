@@ -135,10 +135,10 @@
                 </tr>
 
                 <!-- 商品 -->
-                <tr id="cart_item_" class="shop-list ">
+                <tr id="cart_item_" class="shop-list" style="display: none;">
                     <!-- 复选框 -->
                     <td>
-                        <input type="checkbox" checked="" id="cart_id" name="cart_id[]">
+                        <input type="checkbox" checked="" name="cart_id[]" class="checkboxs">
                     </td>
                     <!-- 商品图片 -->
                     <td class="w60">
@@ -146,33 +146,34 @@
                     </td>
                     <!-- 商品标题 -->
                     <td class="tl">
-                        <dl class="ncc-goods-info">
+                        <dl class="ncc-goods-info" style="text-align: left;">
                             <dt><a href="" target="_blank"></a></dt>
                         </dl>
                     </td>
                     <!-- 单价 -->
-                    <td class="w120"><em id="price_"></em></td>
+                    <td class="w120"><em class="price"></em></td>
                     <!-- 数量 -->
                     <td class="w120 ws0">
                         <!-- 减 -->
-                        <a href="JavaScript:;" title="减少商品件数" class="add-substract-key tip">-</a>
+                        <a href="JavaScript:;" title="减少商品件数" class="add-substract-key tip substract">-</a>
                         <!-- 现有数量 -->
-                        <input id="input_item_" orig="1" changed="1" type="text" class="text w20">
+                        <input orig="1" changed="1" type="text" class="text w20 quantity">
                         <!-- 加 -->
-                        <a href="JavaScript:;" title="增加商品件数" class="add-substract-key tip">+</a>
+                        <a href="JavaScript:;" title="增加商品件数" class="add-substract-key tip add">+</a>
                     </td>
+
                     <!-- 小计价格 -->
                     <td class="w120">
-                        <em id="subtotal_" nc_type="eachGoodsTotal">11.80</em>
+                        <em nc_type="eachGoodsTotal" class="subtotal"></em>
                     </td>
                     <!-- 收藏、删除 -->
                     <td class="w80">
-                        <a href="javascript:">收藏</a><br>
-                        <a href="javascript:">删除</a>
+                        <a href="javascript:;">收藏</a><br>
+                        <a href="javascript:;" class="remove_item">删除</a>
                     </td>
                 </tr>
                 <!-- 店铺商品总价格 -->
-                <tr>
+                <!-- <tr>
                     <td class="tr" colspan="20">
                         <div class="ncc-store-account">
                             <dl style="text-align: right;">
@@ -181,13 +182,13 @@
                             </dl>
                         </div>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
             <!-- 商品总价 -->
             <tfoot>
                 <tr>
                     <td colspan="20">
-                        <div class="ncc-all-account">商品总价（不含运费）<em id="cartTotal">11.80</em>元</div>
+                        <div class="ncc-all-account">商品总价（不含运费）<em id="cartTotal"></em>元</div>
                     </td>
                 </tr>
             </tfoot>

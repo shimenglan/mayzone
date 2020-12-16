@@ -154,12 +154,24 @@ define([], () => {
                     yzmflag = true;
                 } else {
                     $('#green3').hide();
-                    $('#red3').show();
+                    $('#red3').show().html('图文验证码错误');
                     yzmflag = false;
                 }
             });
             //全部验证通过后提交后端注册成功
             $('#regist').on('click', function() {
+                if ($('#user_name').val() === '') {
+                    $('#red').show();
+                }
+                if ($('#password').val() === '') {
+                    $('#red7').show();
+                }
+                if ($('#password2').val() === '') {
+                    $('#red8').show();
+                }
+                if ($('#yzm').val() === '') {
+                    $('#red3').show().html('验证码不能为空');
+                }
                 if (userflag && pwflag1 && pwflag2 && yzmflag) {
                     $.ajax({
                         type: 'post',

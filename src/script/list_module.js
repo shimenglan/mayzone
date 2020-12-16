@@ -133,6 +133,9 @@ define(['pagination', 'jlazyload'], function() {
                                     </div>
                                 </li>`;
                             });
+                            //默认排序按钮选中
+                            $('.default_sort').parent().attr('class', 'selected');
+                            $('.default_sort').parent().siblings().attr('class', '');
                             $list.html(strhtml);
                             //懒加载
                             $("img.lazy").lazyload({ effect: "fadeIn" });
@@ -177,8 +180,8 @@ define(['pagination', 'jlazyload'], function() {
                 });
 
                 $('.descending').on('click', function() {
-                    $(this.parentNode).attr('class', 'selected');
-                    $(this.parentNode).siblings().attr('class', '');
+                    $(this).parent().attr('class', 'selected');
+                    $(this).parent().siblings().attr('class', '');
                     for (let i = 0; i < $array.length - 1; i++) {
                         for (let j = 0; j < $array.length - i - 1; j++) {
                             $prev = parseFloat($array[j].find('span').html().substring(1)); //上一个价格
@@ -197,16 +200,11 @@ define(['pagination', 'jlazyload'], function() {
                 });
             });
             //小图移入效果
-            $('.goods-lists').on('mouseover', function(e) {
-                let ev = e || window.event;
-                let eleTarget = ev.target || ev.srcElement;
-                let $eleTarget = $(eleTarget);
-                if ($eleTarget.attr('class') === 'goods_imgs-li') {
-                    $eleTarget.css('border', '2px solid red');
-                    $eleTarget.siblings().css('border', '2px solid #ddd');
-                    let $imgbox = $(eleTarget.parentNode.parentNode.parentNode).find('.goods_info_img img');
-                    $imgbox.attr('src', $eleTarget.find('img').attr('src'));
-                }
+            $('.goods-lists').on('mouseover', '.goods_imgs-li', function(e) {
+                $(this).css('border', '2px solid red');
+                $(this).siblings().css('border', '2px solid #ddd');
+                let $imgbox = $(this).parent().parent().parent().find('.goods_info_img img');
+                $imgbox.attr('src', $(this).find('img').attr('src'));
 
             })
         }
