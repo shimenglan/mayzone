@@ -297,27 +297,38 @@ a {
 }
 
 .red {
-    right: -13px;
+    left: 505px;
+    white-space: nowrap;
 }
 
 .red1 {
-    right: -172px;
+    left: 505px;
+    white-space: nowrap;
 }
 
 .red2 {
-    right: -110px;
+    left: 505px;
+    white-space: nowrap;
 }
 
 .red3 {
-    right: -14px;
+    left: 505px;
+    white-space: nowrap;
 }
 
 .red4 {
-    right: -100px;
+    left: 505px;
+    white-space: nowrap;
 }
 
 .red5 {
-    right: -110px;
+    top: 65px;
+    left: 505px;
+    white-space: nowrap;
+}
+
+#green5 {
+    top: 65px;
 }
 
 .red6 {
@@ -346,6 +357,26 @@ a {
 
 .red12 {
     right: -14px;
+}
+
+.tel {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.tel-name {
+    float: left;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#telephone {
+    line-height: 38px;
+    padding-left: 25px;
+    width: 360px;
+    margin-left: 14px;
+    margin-bottom: 10px;
 }
 
 .si-yz-red {

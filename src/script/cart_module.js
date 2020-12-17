@@ -53,7 +53,7 @@ define(['jcookie'], function() {
                         $newTr.find('.ncc-goods-info a').attr('href', 'detail.html?sid=' + sid).html(datalist.title);
                         $newTr.find('.price').html(datalist.price);
                         $newTr.find('.quantity').val(num);
-                        $newTr.find('.subtotal').html(datalist.price * num);
+                        $newTr.find('.subtotal').html((datalist.price * num).toFixed(2));
                         $('tbody').append($newTr);
                         totalPrice();
                     }
@@ -69,57 +69,66 @@ define(['jcookie'], function() {
             //总价计算
             function totalPrice() {
                 total = 0;
-                $('.shop-list:visible').find('input:checked').parent().parent().find('.subtotal').each(function(index, element) {
-                    total += parseInt($(element).html());
-                })
-                $('#cartTotal').html(total);
+                $('.shop-list:visible').find('input:checked').parents('.shop-list').find('.subtotal').each(function(index, element) {
+                    total += parseFloat($(element).html());
+                });
+                $('#cartTotal').html((total.toFixed(2)));
             }
             $('.checkboxs').on('click', totalPrice);
             //数量改变后，该商品的总价和所有商品总价改变，cookie改变
             function quantityChange() {
-                $cart_item.find('.subtotal').html($text.num * $cart_item.find('.price').html());
+                $cart_item.find('.subtotal').html(($text.num * $cart_item.find('.price').html()).toFixed(2));
                 totalPrice();
                 //改变cookie，当前商品sid：$cart_item.attr('id').substring(10)
                 arrnum.splice(arrsid.indexOf($cart_item.attr('id').substring(10)), 1, $text.num);
                 arrTocookie();
             }
-            $('.quantity').on('blur', function() {
+            $('.quantity').on('input', function() {
                 $text = $(this);
-                $text.num = parseInt($text.val());
+                $text.num = $text.val();
+                if (!/^\d+$/.test($(this).val())) { //不是数字
+                    $(this).val(1);
+                }
                 if ($text.num <= 1) {
                     $text.num = 1;
                 }
+                if ($text.num >= 99) {
+                    $text.num = 99;
+                }
                 $text.val($text.num);
-                $cart_item = $(this).parent().parent();
+                $cart_item = $(this).parents('.shop-list');
                 quantityChange();
             })
             $('.substract').on('click', function() {
                 $text = $(this.parentNode).find('input');
-                $text.num = parseInt($text.val());
+                $text.num = $text.val();
                 $text.num--;
                 if ($text.num <= 1) {
                     $text.num = 1;
                 }
                 $text.val($text.num);
-                $cart_item = $(this).parent().parent();
+                $cart_item = $(this).parents('.shop-list');
                 quantityChange();
             });
             $('.add').on('click', function() {
                 $text = $(this).parent().find('input');
-                $text.num = parseInt($text.val());
+                $text.num = $text.val();
                 $text.num++;
+                if ($text.num >= 99) {
+                    $text.num = 99;
+                }
                 $text.val($text.num);
-                $cart_item = $(this).parent().parent();
+                $cart_item = $(this).parents('.shop-list');
                 quantityChange();
             });
             //删除商品，cookie中也删除
             $('.remove_item').on('click', function() {
                 if (confirm('确定删除该商品吗？')) {
-                    $(this).parent().parent().remove();
+                    $(this).parents('.shop-list').remove();
                     totalPrice();
-                    //当前商品sid：$(this).parent().parent().attr('id').substring(10)
-                    arrsid.splice(arrsid.indexOf($(this).parent().parent().attr('id').substring(10)), 1);
-                    arrnum.splice(arrsid.indexOf($(this).parent().parent().attr('id').substring(10)), 1);
+                    //当前商品sid：$(this).parents('.shop-list').attr('id').substring(10)
+                    arrsid.splice(arrsid.indexOf($(this).parents('.shop-list').attr('id').substring(10)), 1);
+                    arrnum.splice(arrsid.indexOf($(this).parents('.shop-list').attr('id').substring(10)), 1);
                     //重置cookie
                     arrTocookie();
                 }

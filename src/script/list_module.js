@@ -98,10 +98,10 @@ define(['pagination', 'jlazyload'], function() {
                                 <li class="goods-content">
                                 <div class="goods_info">
                                     <div class="goods_info_img">
-                                        <a href="detail.html" target="_blank"><img class="lazy" data-original="${value.url}"></a>
+                                        <a href="detail.html?sid=${value.sid}" target="_blank"><img class="lazy" data-original="${value.url}"></a>
                                     </div>
                                     <p class="goods_info_price"><span>￥${value.price}</span></p>
-                                    <p class="goods_info_title"><a href="detail.html" target="_blank">${value.title}</a></p>
+                                    <p class="goods_info_title"><a href="detail.html?sid=${value.sid}" target="_blank">${value.title}</a></p>
                                     <p class="goods_info_store">所属店铺：<a href="#">优优阳光</a></p>
                                     <table class="goodslist_tab">
                                         <tbody>
@@ -119,12 +119,12 @@ define(['pagination', 'jlazyload'], function() {
                                 <div class="goods_imgs">
                                     <ul>
                                 `;
-
+                                let $vsid = value.sid;
                                 let arrurls = value.urls.split(',');
                                 $.each(arrurls, function(index, value) {
                                     strhtml += `
                                         <li class="goods_imgs-li">
-                                            <a href="javascript:;">
+                                            <a href="detail.html?sid=${$vsid}">
                                                 <img class="lazy" data-original="${value}"></a>
                                         </li>
                                     `;

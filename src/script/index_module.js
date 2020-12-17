@@ -49,10 +49,10 @@ define(['jlazyload'], () => {
 
             //轮播图下方运动的红线
             function redLine() {
-                $('.slide-line').css('width', '0')
+                $('.slide-line').css('width', '0');
                 $('.slide-line').animate({
                     width: '100%'
-                }, 2000, 'linear');
+                }, 2900, 'linear');
             }
             redLine();
             let timer_line = setInterval(redLine, 3000);

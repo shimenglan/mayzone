@@ -21,7 +21,7 @@ define(['jcookie'], function() {
             //获取sid
             let sid = location.search.substring(1).split('=')[1];
             if (!sid) {
-                sid = 1;
+                sid = '1';
             }
             $.ajax({
                 url: 'http://10.31.161.89/dashboard/mayzone/php/detail.php',
@@ -78,17 +78,33 @@ define(['jcookie'], function() {
                 })
             });
             //商品数量加或减
-            let quantitynum = parseInt($('#quantity').val());
+            let quantitynum = $('#quantity').val();
+            $('#quantity').on('input', function() {
+                quantitynum = $('#quantity').val();
+                if (!/^\d+$/.test(quantitynum)) {
+                    $(this).val(1);
+                }
+                if (quantitynum <= 1) {
+                    quantitynum = 1;
+                }
+                if (quantitynum >= 99) {
+                    quantitynum = 99;
+                }
+                $('#quantity').val(quantitynum);
+            })
             $('.increase').on('click', function() {
-                quantitynum = parseInt($('#quantity').val());
+                quantitynum = $('#quantity').val();
                 quantitynum++;
+                if (quantitynum >= 99) {
+                    quantitynum = 99;
+                }
                 $('#quantity').val(quantitynum);
             });
             $('.decrease').on('click', function() {
-                quantitynum = parseInt($('#quantity').val());
+                quantitynum = $('#quantity').val();
                 quantitynum--;
-                if (quantitynum <= 0) {
-                    quantitynum = 0;
+                if (quantitynum <= 1) {
+                    quantitynum = 1;
                 }
                 $('#quantity').val(quantitynum);
             });
@@ -139,12 +155,14 @@ define(['jcookie'], function() {
                 if ($.cookie('cookiesid') && $.cookie('cookienum')) {
                     arrsid = $.cookie('cookiesid').split(',');
                     arrnum = $.cookie('cookienum').split(',');
+                } else {
+                    arrsid = [];
+                    arrnum = [];
                 }
             }
             $('.addcart').on('click', function() {
                 quantitynum = parseInt($('#quantity').val());
                 strToArr();
-                console.log(arrsid.includes(sid))
                 if (!arrsid.includes(sid)) { //不存在
                     arrsid.push(sid);
                     arrnum.push(quantitynum);
@@ -156,6 +174,20 @@ define(['jcookie'], function() {
                 }
                 $('.ncs-cart-popup').show();
                 $('#bold_num').html(arrsid.length);
+                let total = 0;
+                $.each(arrsid, function(index, value) {
+                    $.ajax({
+                        url: 'http://10.31.161.89/dashboard/mayzone/php/cart.php',
+                        data: {
+                            sid: value
+                        },
+                        dataType: 'json'
+                    }).done(function(data) {
+                        total += data.price * arrnum[index];
+                        $('#bold_mly').html('￥' + total);
+                    });
+                });
+
                 $('.close').on('click', function() {
                     $('.ncs-cart-popup').hide();
                 })
