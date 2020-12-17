@@ -36,7 +36,7 @@ define(['jcookie'], function() {
                 $('.cost-price strong').html('￥' + datalist.price * 2);
                 $('.price strong').html(`<b>¥</b>` + datalist.price);
                 //小图渲染
-                arrimgs = datalist.urls.split(',');
+                let arrimgs = datalist.urls.split(',');
                 let strhtml = '';
                 $.each(arrimgs, function(index, value) {
                     strhtml += `
